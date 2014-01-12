@@ -35,21 +35,30 @@
 	\chapter{Teoría de Grupos}
 		\section["Teoría de"]{Teoría de Grupos}
 			\subsection{Definición de Grupo}
-			\textbf{Ejemplo 1.-} Supongamos que $G = \mathbb{Z}$, con a·b, para $a,b\in G$, definida como la suma usual entre enteros, es decir, con $a·b=a+b$. Demostrar que G es un grupo abeliano infinito en el que 0 juega el papel de e y $-a$ el de $a^{-1}$
-			G es un grupo $\iff$ cumple lo siguiente.
-			\begin{enumerate}
-				\item $\forall$ a,b $\in$ G $\in$ G a·b $\in$ G
-				\item $\forall$ a,b,c $\in$ G, a·(b·c) = (a·b)·c
-				\item $\exists$ e $\in$ G : $\forall$ a $\in$ G, e·a=a·e=a
-				\item $\forall$ a $\in$ G $\exists$ $a^{-1} \in$ G : a·$a^{-1}$ = e
-			\end{enumerate}
+				\textbf{Ejemplo 1.-} Supongamos que $G = \mathbb{Z}$, con a·b, para $a,b\in G$, definida como la suma usual entre enteros, es decir, con $a·b=a+b$. Demostrar que G es un grupo abeliano infinito en el que 0 juega el papel de e y $-a$ el de $a^{-1}$
+				G es un grupo $\iff$ cumple lo siguiente.
+				\begin{enumerate}
+					\item $\forall$ a,b $\in$ G $\in$ G a·b $\in$ G
+					\item $\forall$ a,b,c $\in$ G, a·(b·c) = (a·b)·c
+					\item $\exists$ e $\in$ G : $\forall$ a $\in$ G, e·a=a·e=a
+					\item $\forall$ a $\in$ G $\exists$ $a^{-1} \in$ G : a·$a^{-1}$ = e
+				\end{enumerate}
 
-			%\begin{proof}[Demostración.]
-			%	\
-			%\end{proof} 
-			\textbf{1.-}
-			\begin{proof}
-				Sean a,b $\in$ G a·b $\in$ G $\iff$ a+b $\in \mathbb{Z} \iff$ a,b $\in \mathbb{Z}$
-			\end{proof}
+				%\begin{proof}[Demostración.]
+				%	\
+				%\end{proof} 
+				\begin{proof}:
+					\newline
+					\newline
+					\textbf{1.-} Sean a,b $\in$ G, a·b $\in$ G $\iff$ a+b $\in \mathbb{Z} \iff$ a,b $\in \mathbb{Z}$
+					\newline
+					\newline
+					\textbf{2.-} Sean a,b,c $\in$ G, $\Rightarrow$ a,b,c $\in$ G, $\Rightarrow$ a·(b·c) = a+(b+c) = (a+b)+c = (a·b)·c  $\Rightarrow$ a·(b·c)=(a·b)·c
+					\newline
+					\newline
+					\textbf{3.-} Sea a $\in$ G, $\exists$ e $\in$ G : e·a = a·e = a $\forall$ a $\in$ G $\iff$  $\exists$ w $\in$ $\mathbb{Z}$ : w·a = a·w = a $\forall$ a $\in$ $\mathbb{Z}$ (1 cumple)
+					\newline
+					\newline
+				\end{proof}
 
 \end{document} % Fin del documento.
