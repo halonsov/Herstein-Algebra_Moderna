@@ -841,7 +841,6 @@
 				Sea $\varphi_{a}$ $\in$ $G$, $\therefore$ $\varphi_{a}$ es una aplicación biyectiva de A en A, $\therefore$ $\exists$ $\varphi_{a}^{-1}$ : $\varphi_{a}\circ\varphi_{a}^{-1}$ = $\varphi_{I}$. $\varphi_{a}^{-1}$ también es una aplicación biyectova de A en A, $\therefore$ $\varphi_{a}^{-1}$ $\in$ $G$
 				\newline
 			\end{proof}
-
 			\begin{lem}
 				Si $G$ es un grupo, entonces:
 				\begin{enumerate}
@@ -852,44 +851,28 @@
 				\end{enumerate}
 				\begin{proof}:
 					\newline
-					Sea $G$ un grúpo
+					Sea $G$ un grupo
 					\newline
 					\newline
-					\textbf{1.} Sean $e_{1}$, $e_{2}$ $\in$ G : $\forall$ a $\in$ G $e_{1}$·a = a·$e_{1}$ = a y $e_{2}$·a = a·$e_{2}$ = a, $e_{1}$ = $e_{1}$ y por un lado $e_{1}$·$e_{2}$ = $e_{1}$ $\Rightarrow$ $e_{1}$ = $e_{1}$·$e_{2}$ ,  pero también se cumple que $e_{1}$·$e_{2}$ = $e_{2}$ $\therefore$ $e_{1}$ = $e_{2}$
+					\textbf{1.} Sean $e_{1}$, $e_{2}$ $\in$ $G$ : $\forall$ a $\in$ $G$ $e_{1}$·a = a·$e_{1}$ = a y $e_{2}$·a = a·$e_{2}$ = a. Ahora $e_{1}$ = $e_{1}$ y $e_{1}$·$e_{2}$ = $e_{1}$ $\Rightarrow$ $e_{1}$ = $e_{1}$·$e_{2}$ ,  pero también se cumple que $e_{1}$·$e_{2}$ = $e_{2}$
+					\newline
+					$\therefore$ $e_{1}$ = $e_{2}$
 					\newline
 					\newline
-					\textbf{2.} 
-
+					\textbf{2.} Sean a,$a_{1}^{-1}$, $a_{2}^{-1}$ $\in$ $G$ : a·$a_{1}^{-1}$ = $a_{1}^{-1}$·a = e y a·$a_{2}^{-1}$ = $a_{2}^{-1}$·a = e. Ahora $a_{1}^{-1}$ = e·$a_{1}^{-1}$ $\Rightarrow$ $a_{1}^{-1}$ = ($a_{2}^{-1}$·a)·$a_{1}^{-1}$ $\Rightarrow$ como $G$ es grupo $a_{1}^{-1}$ = $a_{2}^{-1}$·(a·$a_{1}^{-1}$) $\Rightarrow$ $a_{1}^{-1}$ = $a_{2}^{-1}$·e 
+					\newline
+					$\therefore$ $a_{1}^{-1}$ = $a_{2}^{-1}$
+					\newline
+					\newline
+					\textbf{3.} Sea a $\in$ $G$ tenemos que a·$a^{-1}$ = e y $a^{-1}$·($a^{-1}$)$^{-1}$ = e $\Rightarrow$ multiplicando por ($a^{-1}$)$^{-1}$ tenemos: (a·$a^{-1}$)·($a^{-1}$)$^{-1}$ = ($a^{-1}$)$^{-1}$ y ($a^{-1}$)$^{-1}$·($a^{-1}$·($a^{-1}$)$^{-1}$) = ($a^{-1}$)$^{-1}$ $\Rightarrow$ (a·$a^{-1}$)·($a^{-1}$)$^{-1}$ = ($a^{-1}$)$^{-1}$·($a^{-1}$·($a^{-1}$)$^{-1}$) $\Rightarrow$ como $G$ es grupo a·($a^{-1}$·($a^{-1}$)$^{-1}$) = (($a^{-1}$)$^{-1}$·$a^{-1}$)·($a^{-1}$)$^{-1}$ $\Rightarrow$ a·e = e·($a^{-1}$)$^{-1}$ $\therefore$ a = ($a^{-1}$)$^{-1}$
+					\newline
+					\newline
+					\textbf{4.} Sean a,b $\in$ $G$ 
 				\end{proof}
 			\end{lem}
-
 \end{document} % Fin del documento.
 
-e.-
-	a->a
-	b->b
-	c->c
-1.-
-	a->a
-	b->c
-	c->b
-2.-
-	a->b
-	b->a
-	c->c
-3.-
-	a->c
-	b->b
-	c->a
-4.-
-	a->b
-	b->c
-	c->a
-5.-
-	a->c
-	b->a
-	c->b
-
-	a->a
-	b->c
-	c->b
+a·a¹=e
+a¹·a²=e
+(a·a¹)·a²=a²
+a²·(a¹·a²)=a²
