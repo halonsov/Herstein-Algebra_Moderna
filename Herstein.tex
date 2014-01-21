@@ -8,6 +8,8 @@
 \usepackage{color}
 \usepackage{textpos}
 \usepackage[T1]{fontenc}
+\usepackage{enumerate}
+
 \newtheorem{teo}{Teorema}[section]
 \newtheorem{lem}{Lema}[section]
 
@@ -867,9 +869,72 @@
 					\textbf{3.} Sea a $\in$ $G$ tenemos que a·$a^{-1}$ = e y $a^{-1}$·($a^{-1}$)$^{-1}$ = e $\Rightarrow$ multiplicando por ($a^{-1}$)$^{-1}$ tenemos: (a·$a^{-1}$)·($a^{-1}$)$^{-1}$ = ($a^{-1}$)$^{-1}$ y ($a^{-1}$)$^{-1}$·($a^{-1}$·($a^{-1}$)$^{-1}$) = ($a^{-1}$)$^{-1}$ $\Rightarrow$ (a·$a^{-1}$)·($a^{-1}$)$^{-1}$ = ($a^{-1}$)$^{-1}$·($a^{-1}$·($a^{-1}$)$^{-1}$) $\Rightarrow$ como $G$ es grupo a·($a^{-1}$·($a^{-1}$)$^{-1}$) = (($a^{-1}$)$^{-1}$·$a^{-1}$)·($a^{-1}$)$^{-1}$ $\Rightarrow$ a·e = e·($a^{-1}$)$^{-1}$ $\therefore$ a = ($a^{-1}$)$^{-1}$
 					\newline
 					\newline
-					\textbf{4.} Sean a,b $\in$ $G$ 
+					\textbf{4.} Sean a,b $\in$ $G$
+					\newline
+					($a$·$b$)$^{-1}$·(a·b) = (a·b)·($a$·$b$)$^{-1}$ = e $\Rightarrow$ ($a$·$b$)$^{-1}$ = $b^{-1}$·$a^{-1}$ $\iff$ ($b^{-1}$·$a^{-1}$)·(a·b) = (a·b)·($b^{-1}$·$a^{-1}$) = e $\iff$ (($b^{-1}$·$a^{-1}$)·a)·b = a·(b·($b^{-1}$·$a^{-1}$)) = e $\iff$ ($b^{-1}$·($a^{-1}$·a))·b = a·((b·$b^{-1}$)·$a^{-1}$) = e $\iff$ ($b^{-1}$·e)·b = a·(e·$a^{-1}$) = e $\iff$ $b^{-1}$·b = a·$a^{-1}$ = e $\iff$ e = e = e
 				\end{proof}
-			\end{lem}
+			\end{lem}.
+			\newline
+			\textbf{Problemas}.
+			\newline
+			\newline
+			\textbf{1.} Determine, en cada caso uno de los siguientes casos, si el sistema descrito es o no grupo.
+			\newline
+			\begin{enumerate}[a)]
+				\item $G$ = $\mathbb{Z}$, a·b = a-b
+					\newline
+					\begin{proof}:
+						\newline
+						\begin{enumerate}[1.]
+							\item Sean a,b $\in$ $G$, a·b $\in$ $G$ $\iff$ a-b $\in$ $\mathbb{Z}$ con a,b $\in$ $\mathbb{Z}$
+							\item Sean a,b,c $\in$ $G$, a·(b·c) = (a·b)·c $\iff$ a-(b-c) = (a-b)-c con a,b,c $\in$ $Z$
+							\item $\exists$ e $\in$ $G$ : a·e = e·a = a $\forall$ a $\in$ $G$ $\iff$ $\exists$ e $\in$ $\mathbb{Z}$ : a-e = e-a = a $\forall$ a $\in$ $\mathbb{Z}$(el 0 cumple)
+							\item $\exists$ $a^{-1}$ $\in$ $G$ : a·$a^{-1}$ = $a^{-1}$·a = e $\forall$ a $\in$ $G$ $\iff$ $\exists$ $a^{-1}$ $\in$ $\mathbb{Z}$ : $a^{-1}$-a = a-$a^{-1}$ = e $\forall$ a $\in$ $\mathbb{Z}$(a cumple)
+						\end{enumerate}
+					\end{proof}.
+				\newline
+				\item $G$ = $\mathbb{Z}^{+}$, a·b = ab
+					\newline
+					\begin{proof}:
+						\newline
+						\begin{enumerate}[1.]
+							\item Sean a,b $\in$ $G$, a·b $\in$ $G$ $\iff$ ab $\in$ $\mathbb{Z}^{+}$ con a,b $\in$ $\mathbb{Z}^{+}$
+							\item Sean a,b,c $\in$ $G$, a·(b·c) = (a·b)·c $\iff$ a(bc) = (ab)c con a,b,c $\in$ $\mathbb{Z}^{+}$
+							\item $\exists$ e $\in$ $G$ : a·e = e·a = a $\forall$ a $\in$ $G$ $\iff$ $\exists$ e $\in$ $\mathbb{Z}^{+}$ : ae = ea = a $\forall$ a $\in$ $\mathbb{Z}^{+}$(el 1 cumple)
+							\item $\exists$ $a^{-1}$ $\in$ $G$ : a·$a^{-1}$ = $a^{-1}$·a = e $\forall$ a $\in$ $G$ $\iff$ $\exists$ $a^{-1}$ $\in$ $\mathbb{Z}^{-1}$ : $a^{-1}$a = a$a^{-1}$ = e $\forall$ a $\in$ $\mathbb{Z}^{+}$, pero $\exists!$ $a^{-1}$ $\in$ $\mathbb{Z}^{+}$ con estas propiedades
+						\end{enumerate}
+						$\therefore$ G no es un Grupo
+					\end{proof}.
+				\newline
+				\item G := \{ $a_{i}$ : 0 $\leq$ $i$ $\leq$ 6, $a_i$·$a_j$ = $a_{i+j}$ si $i$ < $j$, $a_i$·$a_j$ = $a_{i+j-7}$ si $i+j$ $\geq$ 7 \}, a·b = a+b
+					\newline
+					Es claro que es Grupo, pues es otra manera de definir un $\mathbb{Z}_{[7]}$
+				\newline
+				\item G := \{ x $\in$ $G$ : x = $\frac{a}{b}$ $\in$ $G$, a,b $\in$ $\mathbb{Q}$ $\wedge$ b es impar  \}
+					\newline
+					\begin{proof}:
+						\newline
+						\begin{enumerate}[1.]
+							\item Sean a,b $\in$ $G$ a·b $\in$ $G$, con a = $\frac{a_1}{a_2}$ y b = $\frac{b_1}{b_2}$, $\iff$ $\frac{a_1}{a_2}$+$\frac{b_1}{b_2}$ = c $\in$ $\mathbb{Q}$ $\iff$ $\frac{(a_1b_2)+(b_1a_2)}{a_2b_2}$ = c $\in$ $G$ $\iff$ ($(a_1b_2)+(b_1a_2)$),($a_2b_2$) $\in$ $G$ $\wedge$ $a_2b_2$ es impar, como $a_1$, $a_2$, $b_1$, $b_2$ $\in$ $\mathbb{Z}$ $\Rightarrow$ ($a_1b_2$), ($b_1a_2$) $\in$ $\mathbb{Z}$ $\Rightarrow$ ($a_1b_2$)+($b_1a_2$) $\in$ $\mathbb{Z}$, Ahora como $a_2$ y $b_2$ $\in$ $G$ $\wedge$ $a_2$, $b_2$ son impares $\Rightarrow$ $a_2$$b_2$ es impar $\therefore$ c $\in$ $G$
+							\newline
+							\item Sean a=$\frac{a_1}{a_2}$, b=$\frac{b_1}{b_2}$, c=$\frac{c_1}{c_2}$ $\in$ G a·(b·c) = (a·b)·c 
+							$\iff$
+							 $\frac{a_1}{a_2}$+$\frac{b_1}{b_2}$+$\frac{c_1}{c_2}$ = $\frac{a_1}{a_2}$+$\frac{b_1}{b_2}$+$\frac{c_1}{c_2}$ 
+							 $\iff$ 
+							 $\frac{a_1}{a_2}$+$\frac{(b_1c_2) + (c_1b_2)}{b_2c_2}$ = $\frac{(a_1b_2) + (b_1a_2)}{a_2b_2}$+$\frac{c_1}{c_2}$ 
+							 $\iff$ 
+							 $\frac{a_1(b_2c_2) + ((b_1c_2) + (c_1b_2))a_2}{a_2(b_2c_2)}$ = $\frac{((a_1b_2) + (b_1a_2))c_2 + c_1(a_2b_2)}{(a_2b_2)c_2}$ 
+							 $\iff$
+							 $\frac{a_1b_2c_2 + b_1c_2a_2 + c_1b_2a_2}{a_2b_2c_2}$ = $\frac{a_1b_2c_2 + b_1a_2c_2 + c_1a_2b_2}{a_2b_2c_2}$, Sabemos que se cumple pues $a_1$, $a_2$, $b_1$, $b_2$, $c_1$, $c_2$ $\in$ $\mathbb{Z}$-\{0\} y como $a_2$, $b_2$, $c_2$ son impares $\Rightarrow$ $a_2b_2c_2$ es impar
+							 \newline
+							 \item Sea a = $\frac{a_1}{a_2}$ $\in$ $G$ $\Rightarrow$ $\exists$ e $\in$ $G$ : a·e = e·a = a $\iff$ $\exists$ e $\in$ $\mathbb{Q}$ : $\frac{a_1}{a_2}$ + e = e + $\frac{a_1}{a_2}$ = $\frac{a_1}{a_2}$, 0 cumple y admás 0 $\in$ $G$ pues 0 = $\frac{0}{3}$ $\in$ $G$
+							 \newline
+							 \item Sea a = $\frac{a_1}{a_2}$ $\in$ $G$ $\Rightarrow$ $\exists$ $a^{-1}$ $\in$ $G$ : $a_1$·$a^{-1}$ = $a^{-1}$·$a_1$ = e $\iff$ $\exists$ $\frac{b_1}{b_2}$ $\in$ $\mathbb{Q}$ : $\frac{a_1}{a_2}$ + $\frac{b_1}{b_2}$ = $\frac{b_1}{b_2}$ + $\frac{a_1}{a_2}$ = e $\wedge$ $b_2$ es impar, -$\frac{a_1}{a_2}$ cumple
+						\end{enumerate}
+					\end{proof}
+			\end{enumerate}
+
+
 \end{document} % Fin del documento.
 
 a·a¹=e
