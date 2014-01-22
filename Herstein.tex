@@ -12,6 +12,7 @@
 
 \newtheorem{teo}{Teorema}[section]
 \newtheorem{lem}{Lema}[section]
+\newtheorem{defi}{Definición}[section]
 
 \title{Herstein Algebra Moderna\\Resuelto} % Título
 \author{Humberto Alonso Villegas} %Autor.+ agregando \and Otro autor
@@ -24,21 +25,24 @@
 	\chapter{Nociones Preliminares}
 		\section[''Teoría de Conjuntos'']{Teoría de Conjuntos}
 			\textbf{Ejemplo 1.-} Sea s un conjunto cualquiera y definamos ~ en S por a ~ b para $a, b \in S $ si y solo si a = b. Hemos definido claramente, así, una relación de equivalencia sobre S. En 
-			
-			\begin{itemize}
-			\item pensar como humano
-			\item actuar como humano
-			\item actuar racionalmente
-			\item pensar racionalmente
-			\end {itemize}
-			\newpage
 	\newpage
-
-
 
 	\chapter{Teoría de Grupos}
 		\section["Teoría de"]{Teoría de Grupos}
 			\subsection{Definición de Grupo}
+				\begin{defi}
+					Un conjunto no vacio de elementos $G$ se dice que forma un grupo si en $G$ esta definida una operación binaria, llamada producto y denotada por (·) tal que:
+					\begin{enumerate}
+						\item $\forall$ a,b $\in$ $G$ $\in$ $G$ a·b $\in$ $G$
+						\item $\forall$ a,b,c $\in$ $G$, a·(b·c) = (a·b)·c
+						\item $\exists$ e $\in$ $G$ : $\forall$ a $\in$ $G$, e·a=a·e=a
+						\item $\forall$ a $\in$ $G$ $\exists$ $a^{-1} \in$ $G$ : a·$a^{-1}$ = e
+					\end{enumerate}
+				\end{defi}
+				\begin{defi}
+					Un Grupo se dice que es abeliano (o conmutativo) si $\forall$ a,b $\in$ $G$ a·b = b·a
+				\end{defi}
+			\subsection{Algunos ejemplos de Grupo}
 				\textbf{Ejemplo 1.-} Supongamos que $G = \mathbb{Z}$, con a·b, para $a,b\in G$, definida como la suma usual entre enteros, es decir, con $a·b=a+b$. Demostrar que $G$ es un grupo abeliano infinito en el que 0 juega el papel de e y $-a$ el de $a^{-1}$
 				$G$ es un grupo $\iff$ cumple lo siguiente.
 				\begin{enumerate}
@@ -86,859 +90,891 @@
 					 \newline
 					 \textbf{2.-} Sean a,b,c en $G$, $\Rightarrow$ a,b,c $\in$ $\mathbb{R}$ $\therefore$ a·(b·c) = (a·b)·c
 				\end{proof}.
-			\newline
-			\newline
-			\textbf{3.-} Sea $G$ = $S_{3}$, el grupo de todas las aplicaciones biyectivas del conjunto A = {$x_{1}$, $x_{2}$, $x_{3}$} sobre si mismo, con el producto, la composición. $G$ es un grupo de orden 6.
-			\begin{proof}:
 				\newline
 				\newline
-				$\varphi_{e}$ := $G$ $\rightarrow$ $G$ donde:
-				\newline
-				$\varphi_{e}$($x_{1}$) = $x_{1}$
-				\newline
-				$\varphi_{e}$($x_{2}$) = $x_{2}$
-				\newline
-				$\varphi_{e}$($x_{3}$) = $x_{3}$
-				\newline
-				\newline
-				$\varphi_{1}$ := $G$ $\rightarrow$ $G$ donde:
-				\newline
-				$\varphi_{1}$($x_{1}$) = $x_{1}$
-				\newline
-				$\varphi_{1}$($x_{2}$) = $x_{3}$
-				\newline
-				$\varphi_{1}$($x_{3}$) = $x_{2}$
-				\newline
-				\newline
-				$\varphi_{2}$ := $G$ $\rightarrow$ $G$ donde:
-				\newline
-				$\varphi_{2}$($x_{1}$) = $x_{3}$
-				\newline
-				$\varphi_{2}$($x_{2}$) = $x_{2}$
-				\newline
-				$\varphi_{2}$($x_{3}$) = $x_{1}$
-				\newline
-				\newline
-				$\varphi_{3}$ := $G$ $\rightarrow$ $G$ donde:
-				\newline
-				$\varphi_{3}$($x_{1}$) = $x_{2}$
-				\newline
-				$\varphi_{3}$($x_{2}$) = $x_{1}$
-				\newline
-				$\varphi_{3}$($x_{3}$) = $x_{3}$
-				\newline
-				\newline
-				$\varphi_{4}$ := $G$ $\rightarrow$ $G$ donde:
-				\newline
-				$\varphi_{4}$($x_{1}$) = $x_{2}$
-				\newline
-				$\varphi_{4}$($x_{2}$) = $x_{3}$
-				\newline
-				$\varphi_{4}$($x_{3}$) = $x_{1}$
-				\newline
-				\newline
-				$\varphi_{5}$ := $G$ $\rightarrow$ $G$ donde:
-				\newline
-				$\varphi_{5}$($x_{1}$) = $x_{3}$
-				\newline
-				$\varphi_{5}$($x_{2}$) = $x_{1}$
-				\newline
-				$\varphi_{5}$($x_{3}$) = $x_{2}$
-				\newline
-				\newline
-				\textbf{1.-}:
-				Sean $\varphi_{a}$ y  $\varphi_{b}$ $\in$ $G$ y $\varphi_{C}$ = $\varphi_{a}\circ\varphi_{b}$, sabemos que $\varphi_{a}$ y $\varphi_{b}$ son aplicaciones biyectivas de A en A, $\therefore$ $\varphi_{C}$ también es una aplicación biyectiva de A en A $\therefore$ $\varphi_{C}$ $\in$ $G$
-				\newline
-				\newline
-				\textbf{2.-}
-				Veamos que $\varphi_{a}\circ$($\varphi_{b}\circ\varphi_{c}$) = ($\varphi_{a}\circ\varphi_{b}$)$\circ\varphi_{c}$ $\forall$ $\varphi_{a}$,$\varphi_{b}$,$\varphi_{c}$ $\in$ $G$
-				\newline
-				Omitiremos cuando alguna $\varphi$ es $\varphi_{e}$, pues es claro que se cumple.
-				\newline
-				$\varphi_{1}\circ$($\varphi_{1}\circ\varphi_{1}$) = $\varphi_{1}\circ\varphi_{e}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{1}\circ\varphi_{1}$)$\circ\varphi_{1}$ = $\varphi_{e}\circ\varphi_{1}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{2}\circ\varphi_{2}$) = $\varphi_{2}\circ\varphi_{e}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{2}\circ\varphi_{2}$)$\circ\varphi_{2}$ = $\varphi_{e}\circ\varphi_{2}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{3}\circ\varphi_{3}$) = $\varphi_{3}\circ\varphi_{e}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{3}\circ\varphi_{3}$)$\circ\varphi_{3}$ = $\varphi_{e}\circ\varphi_{3}$ = $\varphi_{3}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{4}\circ\varphi_{4}$) = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{4}\circ\varphi_{4}$)$\circ\varphi_{4}$ = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{5}\circ\varphi_{5}$) = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{5}\circ\varphi_{5}$)$\circ\varphi_{5}$ = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{1}\circ$($\varphi_{2}\circ\varphi_{2}$) = $\varphi_{1}\circ\varphi_{e}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{1}\circ\varphi_{2}$)$\circ\varphi_{2}$ = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{1}\circ$($\varphi_{3}\circ\varphi_{3}$) = $\varphi_{1}\circ\varphi_{e}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{1}\circ\varphi_{3}$)$\circ\varphi_{3}$ = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{1}\circ$($\varphi_{4}\circ\varphi_{4}$) = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{1}\circ\varphi_{4}$)$\circ\varphi_{4}$ = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
-				\newline
-				\newline
-				$\varphi_{1}\circ$($\varphi_{5}\circ\varphi_{5}$) = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{1}\circ\varphi_{5}$)$\circ\varphi_{5}$ = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{2}\circ$($\varphi_{1}\circ\varphi_{1}$) = $\varphi_{2}\circ\varphi_{e}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{2}\circ\varphi_{1}$)$\circ\varphi_{1}$ = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{3}\circ\varphi_{3}$) = $\varphi_{2}\circ\varphi_{e}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{2}\circ\varphi_{3}$)$\circ\varphi_{3}$ = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{4}\circ\varphi_{4}$) = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{2}\circ\varphi_{4}$)$\circ\varphi_{4}$ = $\varphi_{3}\circ\varphi_{4}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{5}\circ\varphi_{5}$) = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{2}\circ\varphi_{5}$)$\circ\varphi_{5}$ = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{3}\circ$($\varphi_{1}\circ\varphi_{1}$) = $\varphi_{3}\circ\varphi_{e}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{3}\circ\varphi_{1}$)$\circ\varphi_{1}$ = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{2}\circ\varphi_{2}$) = $\varphi_{3}\circ\varphi_{e}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{3}\circ\varphi_{2}$)$\circ\varphi_{2}$ = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{4}\circ\varphi_{4}$) = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{3}\circ\varphi_{4}$)$\circ\varphi_{4}$ = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{5}\circ\varphi_{5}$) = $\varphi_{3}\circ\varphi_{4}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{3}\circ\varphi_{5}$)$\circ\varphi_{5}$ = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{4}\circ$($\varphi_{1}\circ\varphi_{1}$) = $\varphi_{4}\circ\varphi_{e}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{4}\circ\varphi_{1}$)$\circ\varphi_{1}$ = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{3}\circ\varphi_{3}$) = $\varphi_{4}\circ\varphi_{e}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{4}\circ\varphi_{3}$)$\circ\varphi_{3}$ = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{2}\circ\varphi_{2}$) = $\varphi_{4}\circ\varphi_{e}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{4}\circ\varphi_{2}$)$\circ\varphi_{2}$ = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{5}\circ\varphi_{5}$) = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{4}\circ\varphi_{5}$)$\circ\varphi_{5}$ = $\varphi_{e}\circ\varphi_{5}$ = $\varphi_{5}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{5}\circ$($\varphi_{1}\circ\varphi_{1}$) = $\varphi_{4}\circ\varphi_{e}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{5}\circ\varphi_{1}$)$\circ\varphi_{1}$ = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{3}\circ\varphi_{3}$) = $\varphi_{5}\circ\varphi_{e}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{5}\circ\varphi_{3}$)$\circ\varphi_{3}$ = $\varphi_{1}\circ\varphi_{3}$ = $\varphi_{5}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{2}\circ\varphi_{2}$) = $\varphi_{5}\circ\varphi_{e}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{5}\circ\varphi_{2}$)$\circ\varphi_{2}$ = $\varphi_{3}\circ\varphi_{2}$ = $\varphi_{5}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{4}\circ\varphi_{4}$) = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{5}\circ\varphi_{4}$)$\circ\varphi_{4}$ = $\varphi_{e}\circ\varphi_{4}$ = $\varphi_{4}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{1}\circ$($\varphi_{1}\circ\varphi_{2}$) = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{1}\circ\varphi_{1}$)$\circ\varphi_{2}$ = $\varphi_{e}\circ\varphi_{2}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{1}\circ$($\varphi_{1}\circ\varphi_{3}$) = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{1}\circ\varphi_{1}$)$\circ\varphi_{3}$ = $\varphi_{e}\circ\varphi_{3}$ = $\varphi_{3}$
-				\newline
-				\newline
-				$\varphi_{1}\circ$($\varphi_{1}\circ\varphi_{4}$) = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{1}\circ\varphi_{1}$)$\circ\varphi_{4}$ = $\varphi_{e}\circ\varphi_{4}$ = $\varphi_{4}$
-				\newline
-				\newline
-				$\varphi_{1}\circ$($\varphi_{1}\circ\varphi_{5}$) = $\varphi_{1}\circ\varphi_{3}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{1}\circ\varphi_{1}$)$\circ\varphi_{5}$ = $\varphi_{e}\circ\varphi_{5}$ = $\varphi_{5}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{1}\circ$($\varphi_{2}\circ\varphi_{1}$) = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{1}\circ\varphi_{2}$)$\circ\varphi_{1}$ = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
-				\newline
-				\newline
-				$\varphi_{1}\circ$($\varphi_{3}\circ\varphi_{1}$) = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{1}\circ\varphi_{3}$)$\circ\varphi_{1}$ = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{1}\circ$($\varphi_{4}\circ\varphi_{1}$) = $\varphi_{1}\circ\varphi_{3}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{1}\circ\varphi_{4}$)$\circ\varphi_{1}$ = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
-				\newline
-				\newline
-				$\varphi_{1}\circ$($\varphi_{5}\circ\varphi_{1}$) = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{1}\circ\varphi_{5}$)$\circ\varphi_{1}$ = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{2}\circ$($\varphi_{2}\circ\varphi_{1}$) = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{2}\circ\varphi_{2}$)$\circ\varphi_{1}$ = $\varphi_{e}\circ\varphi_{1}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{2}\circ\varphi_{3}$) = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{2}\circ\varphi_{2}$)$\circ\varphi_{3}$ = $\varphi_{e}\circ\varphi_{3}$ = $\varphi_{3}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{2}\circ\varphi_{4}$) = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{2}\circ\varphi_{2}$)$\circ\varphi_{4}$ = $\varphi_{e}\circ\varphi_{4}$ = $\varphi_{4}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{2}\circ\varphi_{5}$) = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{2}\circ\varphi_{2}$)$\circ\varphi_{5}$ = $\varphi_{e}\circ\varphi_{5}$ = $\varphi_{5}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{2}\circ$($\varphi_{1}\circ\varphi_{2}$) = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{2}\circ\varphi_{1}$)$\circ\varphi_{2}$ = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{3}\circ\varphi_{2}$) = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{2}\circ\varphi_{3}$)$\circ\varphi_{2}$ = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{4}\circ\varphi_{2}$) = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{2}\circ\varphi_{4}$)$\circ\varphi_{2}$ = $\varphi_{3}\circ\varphi_{2}$ = $\varphi_{5}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{5}\circ\varphi_{2}$) = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{2}\circ\varphi_{5}$)$\circ\varphi_{2}$ = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{3}\circ$($\varphi_{3}\circ\varphi_{1}$) = $\varphi_{3}\circ\varphi_{4}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{3}\circ\varphi_{3}$)$\circ\varphi_{1}$ = $\varphi_{e}\circ\varphi_{1}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{3}\circ\varphi_{2}$) = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{3}\circ\varphi_{3}$)$\circ\varphi_{2}$ = $\varphi_{e}\circ\varphi_{2}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{3}\circ\varphi_{4}$) = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{3}\circ\varphi_{3}$)$\circ\varphi_{4}$ = $\varphi_{e}\circ\varphi_{4}$ = $\varphi_{4}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{3}\circ\varphi_{5}$) = $\varphi_{3}\circ\varphi_{2}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{3}\circ\varphi_{3}$)$\circ\varphi_{5}$ = $\varphi_{e}\circ\varphi_{5}$ = $\varphi_{5}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{3}\circ$($\varphi_{1}\circ\varphi_{3}$) = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{3}\circ\varphi_{1}$)$\circ\varphi_{3}$ = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{2}\circ\varphi_{3}$) = $\varphi_{3}\circ\varphi_{4}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{3}\circ\varphi_{2}$)$\circ\varphi_{3}$ = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{4}\circ\varphi_{3}$) = $\varphi_{3}\circ\varphi_{2}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{3}\circ\varphi_{4}$)$\circ\varphi_{3}$ = $\varphi_{1}\circ\varphi_{3}$ = $\varphi_{5}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{5}\circ\varphi_{3}$) = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{3}\circ\varphi_{5}$)$\circ\varphi_{3}$ = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{4}\circ$($\varphi_{4}\circ\varphi_{1}$) = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{4}\circ\varphi_{4}$)$\circ\varphi_{1}$ = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{4}\circ\varphi_{2}$) = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{4}\circ\varphi_{4}$)$\circ\varphi_{2}$ = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{4}\circ\varphi_{3}$) = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{4}\circ\varphi_{4}$)$\circ\varphi_{3}$ = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{4}\circ\varphi_{5}$) = $\varphi_{4}\circ\varphi_{e}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{4}\circ\varphi_{4}$)$\circ\varphi_{5}$ = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{4}\circ$($\varphi_{1}\circ\varphi_{4}$) = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{4}\circ\varphi_{1}$)$\circ\varphi_{4}$ = $\varphi_{3}\circ\varphi_{4}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{2}\circ\varphi_{4}$) = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{4}\circ\varphi_{2}$)$\circ\varphi_{4}$ = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{3}\circ\varphi_{4}$) = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{4}\circ\varphi_{3}$)$\circ\varphi_{4}$ = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{5}\circ\varphi_{4}$) = $\varphi_{4}\circ\varphi_{e}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{4}\circ\varphi_{5}$)$\circ\varphi_{4}$ = $\varphi_{e}\circ\varphi_{4}$ = $\varphi_{4}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{5}\circ$($\varphi_{5}\circ\varphi_{1}$) = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{5}\circ\varphi_{5}$)$\circ\varphi_{1}$ = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{5}\circ\varphi_{2}$) = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{5}\circ\varphi_{5}$)$\circ\varphi_{2}$ = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{5}\circ\varphi_{3}$) = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{5}\circ\varphi_{5}$)$\circ\varphi_{3}$ = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{5}\circ\varphi_{4}$) = $\varphi_{5}\circ\varphi_{e}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{5}\circ\varphi_{5}$)$\circ\varphi_{4}$ = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{5}\circ$($\varphi_{1}\circ\varphi_{5}$) = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{5}\circ\varphi_{1}$)$\circ\varphi_{5}$ = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{2}\circ\varphi_{5}$) = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{5}\circ\varphi_{2}$)$\circ\varphi_{5}$ = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{3}\circ\varphi_{5}$) = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{5}\circ\varphi_{3}$)$\circ\varphi_{5}$ = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{4}\circ\varphi_{5}$) = $\varphi_{5}\circ\varphi_{e}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{5}\circ\varphi_{4}$)$\circ\varphi_{5}$ = $\varphi_{e}\circ\varphi_{5}$ = $\varphi_{5}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{1}\circ$($\varphi_{2}\circ\varphi_{3}$) = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{1}\circ\varphi_{2}$)$\circ\varphi_{3}$ = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{1}\circ$($\varphi_{2}\circ\varphi_{4}$) = $\varphi_{1}\circ\varphi_{3}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{1}\circ\varphi_{2}$)$\circ\varphi_{4}$ = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
-				\newline
-				\newline
-				$\varphi_{1}\circ$($\varphi_{2}\circ\varphi_{5}$) = $\varphi_{1}\circ\varphi_{1}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{1}\circ\varphi_{2}$)$\circ\varphi_{5}$ = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{1}\circ$($\varphi_{3}\circ\varphi_{2}$) = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{1}\circ\varphi_{3}$)$\circ\varphi_{2}$ = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
-				\newline
-				\newline
-				$\varphi_{1}\circ$($\varphi_{3}\circ\varphi_{4}$) = $\varphi_{1}\circ\varphi_{1}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{1}\circ\varphi_{3}$)$\circ\varphi_{4}$ = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
-				\newline
-				\newline
-				$\varphi_{1}\circ$($\varphi_{3}\circ\varphi_{5}$) = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{1}\circ\varphi_{3}$)$\circ\varphi_{5}$ = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{1}\circ$($\varphi_{4}\circ\varphi_{2}$) = $\varphi_{1}\circ\varphi_{1}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{1}\circ\varphi_{4}$)$\circ\varphi_{2}$ = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
-				\newline
-				\newline
-				$\varphi_{1}\circ$($\varphi_{4}\circ\varphi_{3}$) = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{1}\circ\varphi_{4}$)$\circ\varphi_{3}$ = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
-				\newline
-				\newline
-				$\varphi_{1}\circ$($\varphi_{4}\circ\varphi_{5}$) = $\varphi_{1}\circ\varphi_{e}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{1}\circ\varphi_{4}$)$\circ\varphi_{5}$ = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{2}\circ$($\varphi_{1}\circ\varphi_{3}$) = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{2}\circ\varphi_{1}$)$\circ\varphi_{3}$ = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{1}\circ\varphi_{4}$) = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{2}\circ\varphi_{1}$)$\circ\varphi_{4}$ = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{1}\circ\varphi_{5}$) = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{2}\circ\varphi_{1}$)$\circ\varphi_{5}$ = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{2}\circ$($\varphi_{3}\circ\varphi_{1}$) = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{2}\circ\varphi_{3}$)$\circ\varphi_{1}$ = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{3}\circ\varphi_{4}$) = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{2}\circ\varphi_{3}$)$\circ\varphi_{4}$ = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{3}\circ\varphi_{5}$) = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{2}\circ\varphi_{3}$)$\circ\varphi_{5}$ = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{2}\circ$($\varphi_{4}\circ\varphi_{1}$) = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{2}\circ\varphi_{4}$)$\circ\varphi_{1}$ = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{4}\circ\varphi_{3}$) = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{2}\circ\varphi_{4}$)$\circ\varphi_{3}$ = $\varphi_{3}\circ\varphi_{3}$ = $\varphi_{e}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{4}\circ\varphi_{5}$) = $\varphi_{2}\circ\varphi_{e}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{2}\circ\varphi_{4}$)$\circ\varphi_{5}$ = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{2}\circ$($\varphi_{5}\circ\varphi_{1}$) = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{2}\circ\varphi_{5}$)$\circ\varphi_{1}$ = $\varphi_{1}\circ\varphi_{1}$ = $\varphi_{e}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{5}\circ\varphi_{3}$) = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{2}\circ\varphi_{5}$)$\circ\varphi_{3}$ = $\varphi_{1}\circ\varphi_{3}$ = $\varphi_{5}$
-				\newline
-				\newline
-				$\varphi_{2}\circ$($\varphi_{5}\circ\varphi_{4}$) = $\varphi_{2}\circ\varphi_{e}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{2}\circ\varphi_{5}$)$\circ\varphi_{4}$ = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{3}\circ$($\varphi_{1}\circ\varphi_{2}$) = $\varphi_{3}\circ\varphi_{4}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{3}\circ\varphi_{1}$)$\circ\varphi_{2}$ = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{1}\circ\varphi_{4}$) = $\varphi_{3}\circ\varphi_{2}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{3}\circ\varphi_{1}$)$\circ\varphi_{4}$ = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{1}\circ\varphi_{5}$) = $\varphi_{3}\circ\varphi_{3}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{3}\circ\varphi_{1}$)$\circ\varphi_{5}$ = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{3}\circ$($\varphi_{2}\circ\varphi_{1}$) = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{3}\circ\varphi_{2}$)$\circ\varphi_{1}$ = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{2}\circ\varphi_{4}$) = $\varphi_{3}\circ\varphi_{3}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{3}\circ\varphi_{2}$)$\circ\varphi_{4}$ = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{2}\circ\varphi_{5}$) = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{3}\circ\varphi_{2}$)$\circ\varphi_{5}$ = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{3}\circ$($\varphi_{4}\circ\varphi_{1}$) = $\varphi_{3}\circ\varphi_{3}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{3}\circ\varphi_{4}$)$\circ\varphi_{1}$ = $\varphi_{1}\circ\varphi_{1}$ = $\varphi_{e}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{4}\circ\varphi_{2}$) = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{3}\circ\varphi_{4}$)$\circ\varphi_{2}$ = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{4}\circ\varphi_{5}$) = $\varphi_{3}\circ\varphi_{e}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{3}\circ\varphi_{4}$)$\circ\varphi_{5}$ = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{3}\circ$($\varphi_{5}\circ\varphi_{1}$) = $\varphi_{3}\circ\varphi_{2}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{3}\circ\varphi_{5}$)$\circ\varphi_{1}$ = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{5}\circ\varphi_{2}$) = $\varphi_{3}\circ\varphi_{3}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{3}\circ\varphi_{5}$)$\circ\varphi_{2}$ = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
-				\newline
-				\newline
-				$\varphi_{3}\circ$($\varphi_{5}\circ\varphi_{4}$) = $\varphi_{3}\circ\varphi_{e}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{3}\circ\varphi_{5}$)$\circ\varphi_{4}$ = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{4}\circ$($\varphi_{1}\circ\varphi_{2}$) = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{4}\circ\varphi_{1}$)$\circ\varphi_{2}$ = $\varphi_{3}\circ\varphi_{2}$ = $\varphi_{5}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{1}\circ\varphi_{3}$) = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{4}\circ\varphi_{1}$)$\circ\varphi_{3}$ = $\varphi_{3}\circ\varphi_{3}$ = $\varphi_{e}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{1}\circ\varphi_{5}$) = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{4}\circ\varphi_{1}$)$\circ\varphi_{5}$ = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{4}\circ$($\varphi_{2}\circ\varphi_{1}$) = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{4}\circ\varphi_{2}$)$\circ\varphi_{1}$ = $\varphi_{1}\circ\varphi_{1}$ = $\varphi_{e}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{2}\circ\varphi_{3}$) = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{4}\circ\varphi_{2}$)$\circ\varphi_{3}$ = $\varphi_{1}\circ\varphi_{3}$ = $\varphi_{5}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{2}\circ\varphi_{5}$) = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{4}\circ\varphi_{2}$)$\circ\varphi_{5}$ = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{4}\circ$($\varphi_{3}\circ\varphi_{1}$) = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
-				\newline
-				($\varphi_{4}\circ\varphi_{3}$)$\circ\varphi_{1}$ = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{3}\circ\varphi_{2}$) = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{4}\circ\varphi_{3}$)$\circ\varphi_{2}$ = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{3}\circ\varphi_{5}$) = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{4}\circ\varphi_{3}$)$\circ\varphi_{5}$ = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{4}\circ$($\varphi_{5}\circ\varphi_{1}$) = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{4}\circ\varphi_{5}$)$\circ\varphi_{1}$ = $\varphi_{e}\circ\varphi_{1}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{5}\circ\varphi_{2}$) = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{4}\circ\varphi_{5}$)$\circ\varphi_{2}$ = $\varphi_{e}\circ\varphi_{2}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{4}\circ$($\varphi_{5}\circ\varphi_{3}$) = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{4}\circ\varphi_{5}$)$\circ\varphi_{3}$ = $\varphi_{e}\circ\varphi_{3}$ = $\varphi_{3}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{5}\circ$($\varphi_{1}\circ\varphi_{2}$) = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{5}\circ\varphi_{1}$)$\circ\varphi_{2}$ = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{1}\circ\varphi_{3}$) = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{5}\circ\varphi_{1}$)$\circ\varphi_{3}$ = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{1}\circ\varphi_{4}$) = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{5}\circ\varphi_{1}$)$\circ\varphi_{4}$ = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{5}\circ$($\varphi_{2}\circ\varphi_{1}$) = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{5}\circ\varphi_{2}$)$\circ\varphi_{1}$ = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{2}\circ\varphi_{3}$) = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{5}\circ\varphi_{2}$)$\circ\varphi_{3}$ = $\varphi_{3}\circ\varphi_{3}$ = $\varphi_{e}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{2}\circ\varphi_{4}$) = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{5}\circ\varphi_{2}$)$\circ\varphi_{4}$ = $\varphi_{3}\circ\varphi_{4}$ = $\varphi_{1}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{5}\circ$($\varphi_{3}\circ\varphi_{1}$) = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
-				\newline
-				($\varphi_{5}\circ\varphi_{3}$)$\circ\varphi_{1}$ = $\varphi_{1}\circ\varphi_{1}$ = $\varphi_{e}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{3}\circ\varphi_{2}$) = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
-				\newline
-				($\varphi_{5}\circ\varphi_{3}$)$\circ\varphi_{2}$ = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{3}\circ\varphi_{4}$) = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{5}\circ\varphi_{3}$)$\circ\varphi_{4}$ = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
-				\newline
-				\newline
-				%
-				%
-				$\varphi_{5}\circ$($\varphi_{4}\circ\varphi_{1}$) = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
-				\newline
-				($\varphi_{5}\circ\varphi_{4}$)$\circ\varphi_{1}$ = $\varphi_{e}\circ\varphi_{1}$ = $\varphi_{1}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{4}\circ\varphi_{2}$) = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
-				\newline
-				($\varphi_{5}\circ\varphi_{4}$)$\circ\varphi_{2}$ = $\varphi_{e}\circ\varphi_{2}$ = $\varphi_{2}$
-				\newline
-				\newline
-				$\varphi_{5}\circ$($\varphi_{4}\circ\varphi_{3}$) = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
-				\newline
-				($\varphi_{5}\circ\varphi_{4}$)$\circ\varphi_{3}$ = $\varphi_{e}\circ\varphi_{3}$ = $\varphi_{3}$
-				\newline
-				\newline
-				%
-				%
-				\textbf{3.-}
-				Es claro que $\varphi_{e}$ cumple $\forall$ $\varphi_{a}$ $\in$ $G$, $\varphi_{e}\circ\varphi_{a}$ = $\varphi_{a}\circ\varphi_{e}$ = a (con la composición como producto)
-				\newline
-				\newline
-				\textbf{4.-}
-				Sea $\varphi_{a}$ $\in$ $G$, $\therefore$ $\varphi_{a}$ es una aplicación biyectiva de A en A, $\therefore$ $\exists$ $\varphi_{a}^{-1}$ : $\varphi_{a}\circ\varphi_{a}^{-1}$ = $\varphi_{I}$. $\varphi_{a}^{-1}$ también es una aplicación biyectova de A en A, $\therefore$ $\varphi_{a}^{-1}$ $\in$ $G$
-				\newline
-			\end{proof}
-			\begin{lem}
-				Si $G$ es un grupo, entonces:
-				\begin{enumerate}
-					\item $\exists!$ e $\in$ $G$ : $\forall$ a $\in$ $G$ a·e = e·a = a
-					\item $\forall$ a $\in$ $G$ $\exists!$ $a^{-1}$ $\in$ $G$ : a·$a^{-1}$ = e
-					\item $\forall$ a $\in$ $G$ ($a^{-1}$)$^{-1}$ = a
-					\item $\forall$ a,b $\in$ $G$ (a·b)$^{-1}$ = $b^{-1}$·$a^{-1}$
-				\end{enumerate}
+				\textbf{3.-} Sea $G$ = $S_{3}$, el grupo de todas las aplicaciones biyectivas del conjunto A = {$x_{1}$, $x_{2}$, $x_{3}$} sobre si mismo, con el producto, la composición. $G$ es un grupo de orden 6.
 				\begin{proof}:
 					\newline
-					Sea $G$ un grupo
+					\newline
+					$\varphi_{e}$ := $G$ $\rightarrow$ $G$ donde:
+					\newline
+					$\varphi_{e}$($x_{1}$) = $x_{1}$
+					\newline
+					$\varphi_{e}$($x_{2}$) = $x_{2}$
+					\newline
+					$\varphi_{e}$($x_{3}$) = $x_{3}$
 					\newline
 					\newline
-					\textbf{1.} Sean $e_{1}$, $e_{2}$ $\in$ $G$ : $\forall$ a $\in$ $G$ $e_{1}$·a = a·$e_{1}$ = a y $e_{2}$·a = a·$e_{2}$ = a. Ahora $e_{1}$ = $e_{1}$ y $e_{1}$·$e_{2}$ = $e_{1}$ $\Rightarrow$ $e_{1}$ = $e_{1}$·$e_{2}$ ,  pero también se cumple que $e_{1}$·$e_{2}$ = $e_{2}$
+					$\varphi_{1}$ := $G$ $\rightarrow$ $G$ donde:
 					\newline
-					$\therefore$ $e_{1}$ = $e_{2}$
+					$\varphi_{1}$($x_{1}$) = $x_{1}$
 					\newline
+					$\varphi_{1}$($x_{2}$) = $x_{3}$
 					\newline
-					\textbf{2.} Sean a,$a_{1}^{-1}$, $a_{2}^{-1}$ $\in$ $G$ : a·$a_{1}^{-1}$ = $a_{1}^{-1}$·a = e y a·$a_{2}^{-1}$ = $a_{2}^{-1}$·a = e. Ahora $a_{1}^{-1}$ = e·$a_{1}^{-1}$ $\Rightarrow$ $a_{1}^{-1}$ = ($a_{2}^{-1}$·a)·$a_{1}^{-1}$ $\Rightarrow$ como $G$ es grupo $a_{1}^{-1}$ = $a_{2}^{-1}$·(a·$a_{1}^{-1}$) $\Rightarrow$ $a_{1}^{-1}$ = $a_{2}^{-1}$·e 
-					\newline
-					$\therefore$ $a_{1}^{-1}$ = $a_{2}^{-1}$
-					\newline
-					\newline
-					\textbf{3.} Sea a $\in$ $G$ tenemos que a·$a^{-1}$ = e y $a^{-1}$·($a^{-1}$)$^{-1}$ = e $\Rightarrow$ multiplicando por ($a^{-1}$)$^{-1}$ tenemos: (a·$a^{-1}$)·($a^{-1}$)$^{-1}$ = ($a^{-1}$)$^{-1}$ y ($a^{-1}$)$^{-1}$·($a^{-1}$·($a^{-1}$)$^{-1}$) = ($a^{-1}$)$^{-1}$ $\Rightarrow$ (a·$a^{-1}$)·($a^{-1}$)$^{-1}$ = ($a^{-1}$)$^{-1}$·($a^{-1}$·($a^{-1}$)$^{-1}$) $\Rightarrow$ como $G$ es grupo a·($a^{-1}$·($a^{-1}$)$^{-1}$) = (($a^{-1}$)$^{-1}$·$a^{-1}$)·($a^{-1}$)$^{-1}$ $\Rightarrow$ a·e = e·($a^{-1}$)$^{-1}$ $\therefore$ a = ($a^{-1}$)$^{-1}$
+					$\varphi_{1}$($x_{3}$) = $x_{2}$
 					\newline
 					\newline
-					\textbf{4.} Sean a,b $\in$ $G$
+					$\varphi_{2}$ := $G$ $\rightarrow$ $G$ donde:
 					\newline
-					($a$·$b$)$^{-1}$·(a·b) = (a·b)·($a$·$b$)$^{-1}$ = e $\Rightarrow$ ($a$·$b$)$^{-1}$ = $b^{-1}$·$a^{-1}$ $\iff$ ($b^{-1}$·$a^{-1}$)·(a·b) = (a·b)·($b^{-1}$·$a^{-1}$) = e $\iff$ (($b^{-1}$·$a^{-1}$)·a)·b = a·(b·($b^{-1}$·$a^{-1}$)) = e $\iff$ ($b^{-1}$·($a^{-1}$·a))·b = a·((b·$b^{-1}$)·$a^{-1}$) = e $\iff$ ($b^{-1}$·e)·b = a·(e·$a^{-1}$) = e $\iff$ $b^{-1}$·b = a·$a^{-1}$ = e $\iff$ e = e = e
+					$\varphi_{2}$($x_{1}$) = $x_{3}$
+					\newline
+					$\varphi_{2}$($x_{2}$) = $x_{2}$
+					\newline
+					$\varphi_{2}$($x_{3}$) = $x_{1}$
+					\newline
+					\newline
+					$\varphi_{3}$ := $G$ $\rightarrow$ $G$ donde:
+					\newline
+					$\varphi_{3}$($x_{1}$) = $x_{2}$
+					\newline
+					$\varphi_{3}$($x_{2}$) = $x_{1}$
+					\newline
+					$\varphi_{3}$($x_{3}$) = $x_{3}$
+					\newline
+					\newline
+					$\varphi_{4}$ := $G$ $\rightarrow$ $G$ donde:
+					\newline
+					$\varphi_{4}$($x_{1}$) = $x_{2}$
+					\newline
+					$\varphi_{4}$($x_{2}$) = $x_{3}$
+					\newline
+					$\varphi_{4}$($x_{3}$) = $x_{1}$
+					\newline
+					\newline
+					$\varphi_{5}$ := $G$ $\rightarrow$ $G$ donde:
+					\newline
+					$\varphi_{5}$($x_{1}$) = $x_{3}$
+					\newline
+					$\varphi_{5}$($x_{2}$) = $x_{1}$
+					\newline
+					$\varphi_{5}$($x_{3}$) = $x_{2}$
+					\newline
+					\newline
+					\textbf{1.-}:
+					Sean $\varphi_{a}$ y  $\varphi_{b}$ $\in$ $G$ y $\varphi_{C}$ = $\varphi_{a}\circ\varphi_{b}$, sabemos que $\varphi_{a}$ y $\varphi_{b}$ son aplicaciones biyectivas de A en A, $\therefore$ $\varphi_{C}$ también es una aplicación biyectiva de A en A $\therefore$ $\varphi_{C}$ $\in$ $G$
+					\newline
+					\newline
+					\textbf{2.-}
+					Veamos que $\varphi_{a}\circ$($\varphi_{b}\circ\varphi_{c}$) = ($\varphi_{a}\circ\varphi_{b}$)$\circ\varphi_{c}$ $\forall$ $\varphi_{a}$,$\varphi_{b}$,$\varphi_{c}$ $\in$ $G$
+					\newline
+					Omitiremos cuando alguna $\varphi$ es $\varphi_{e}$, pues es claro que se cumple.
+					\newline
+					$\varphi_{1}\circ$($\varphi_{1}\circ\varphi_{1}$) = $\varphi_{1}\circ\varphi_{e}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{1}\circ\varphi_{1}$)$\circ\varphi_{1}$ = $\varphi_{e}\circ\varphi_{1}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{2}\circ\varphi_{2}$) = $\varphi_{2}\circ\varphi_{e}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{2}\circ\varphi_{2}$)$\circ\varphi_{2}$ = $\varphi_{e}\circ\varphi_{2}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{3}\circ\varphi_{3}$) = $\varphi_{3}\circ\varphi_{e}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{3}\circ\varphi_{3}$)$\circ\varphi_{3}$ = $\varphi_{e}\circ\varphi_{3}$ = $\varphi_{3}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{4}\circ\varphi_{4}$) = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{4}\circ\varphi_{4}$)$\circ\varphi_{4}$ = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{5}\circ\varphi_{5}$) = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{5}\circ\varphi_{5}$)$\circ\varphi_{5}$ = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{1}\circ$($\varphi_{2}\circ\varphi_{2}$) = $\varphi_{1}\circ\varphi_{e}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{1}\circ\varphi_{2}$)$\circ\varphi_{2}$ = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{1}\circ$($\varphi_{3}\circ\varphi_{3}$) = $\varphi_{1}\circ\varphi_{e}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{1}\circ\varphi_{3}$)$\circ\varphi_{3}$ = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{1}\circ$($\varphi_{4}\circ\varphi_{4}$) = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{1}\circ\varphi_{4}$)$\circ\varphi_{4}$ = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
+					\newline
+					\newline
+					$\varphi_{1}\circ$($\varphi_{5}\circ\varphi_{5}$) = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{1}\circ\varphi_{5}$)$\circ\varphi_{5}$ = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{2}\circ$($\varphi_{1}\circ\varphi_{1}$) = $\varphi_{2}\circ\varphi_{e}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{2}\circ\varphi_{1}$)$\circ\varphi_{1}$ = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{3}\circ\varphi_{3}$) = $\varphi_{2}\circ\varphi_{e}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{2}\circ\varphi_{3}$)$\circ\varphi_{3}$ = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{4}\circ\varphi_{4}$) = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{2}\circ\varphi_{4}$)$\circ\varphi_{4}$ = $\varphi_{3}\circ\varphi_{4}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{5}\circ\varphi_{5}$) = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{2}\circ\varphi_{5}$)$\circ\varphi_{5}$ = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{3}\circ$($\varphi_{1}\circ\varphi_{1}$) = $\varphi_{3}\circ\varphi_{e}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{3}\circ\varphi_{1}$)$\circ\varphi_{1}$ = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{2}\circ\varphi_{2}$) = $\varphi_{3}\circ\varphi_{e}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{3}\circ\varphi_{2}$)$\circ\varphi_{2}$ = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{4}\circ\varphi_{4}$) = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{3}\circ\varphi_{4}$)$\circ\varphi_{4}$ = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{5}\circ\varphi_{5}$) = $\varphi_{3}\circ\varphi_{4}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{3}\circ\varphi_{5}$)$\circ\varphi_{5}$ = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{4}\circ$($\varphi_{1}\circ\varphi_{1}$) = $\varphi_{4}\circ\varphi_{e}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{4}\circ\varphi_{1}$)$\circ\varphi_{1}$ = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{3}\circ\varphi_{3}$) = $\varphi_{4}\circ\varphi_{e}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{4}\circ\varphi_{3}$)$\circ\varphi_{3}$ = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{2}\circ\varphi_{2}$) = $\varphi_{4}\circ\varphi_{e}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{4}\circ\varphi_{2}$)$\circ\varphi_{2}$ = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{5}\circ\varphi_{5}$) = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{4}\circ\varphi_{5}$)$\circ\varphi_{5}$ = $\varphi_{e}\circ\varphi_{5}$ = $\varphi_{5}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{5}\circ$($\varphi_{1}\circ\varphi_{1}$) = $\varphi_{4}\circ\varphi_{e}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{5}\circ\varphi_{1}$)$\circ\varphi_{1}$ = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{3}\circ\varphi_{3}$) = $\varphi_{5}\circ\varphi_{e}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{5}\circ\varphi_{3}$)$\circ\varphi_{3}$ = $\varphi_{1}\circ\varphi_{3}$ = $\varphi_{5}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{2}\circ\varphi_{2}$) = $\varphi_{5}\circ\varphi_{e}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{5}\circ\varphi_{2}$)$\circ\varphi_{2}$ = $\varphi_{3}\circ\varphi_{2}$ = $\varphi_{5}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{4}\circ\varphi_{4}$) = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{5}\circ\varphi_{4}$)$\circ\varphi_{4}$ = $\varphi_{e}\circ\varphi_{4}$ = $\varphi_{4}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{1}\circ$($\varphi_{1}\circ\varphi_{2}$) = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{1}\circ\varphi_{1}$)$\circ\varphi_{2}$ = $\varphi_{e}\circ\varphi_{2}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{1}\circ$($\varphi_{1}\circ\varphi_{3}$) = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{1}\circ\varphi_{1}$)$\circ\varphi_{3}$ = $\varphi_{e}\circ\varphi_{3}$ = $\varphi_{3}$
+					\newline
+					\newline
+					$\varphi_{1}\circ$($\varphi_{1}\circ\varphi_{4}$) = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{1}\circ\varphi_{1}$)$\circ\varphi_{4}$ = $\varphi_{e}\circ\varphi_{4}$ = $\varphi_{4}$
+					\newline
+					\newline
+					$\varphi_{1}\circ$($\varphi_{1}\circ\varphi_{5}$) = $\varphi_{1}\circ\varphi_{3}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{1}\circ\varphi_{1}$)$\circ\varphi_{5}$ = $\varphi_{e}\circ\varphi_{5}$ = $\varphi_{5}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{1}\circ$($\varphi_{2}\circ\varphi_{1}$) = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{1}\circ\varphi_{2}$)$\circ\varphi_{1}$ = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
+					\newline
+					\newline
+					$\varphi_{1}\circ$($\varphi_{3}\circ\varphi_{1}$) = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{1}\circ\varphi_{3}$)$\circ\varphi_{1}$ = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{1}\circ$($\varphi_{4}\circ\varphi_{1}$) = $\varphi_{1}\circ\varphi_{3}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{1}\circ\varphi_{4}$)$\circ\varphi_{1}$ = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
+					\newline
+					\newline
+					$\varphi_{1}\circ$($\varphi_{5}\circ\varphi_{1}$) = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{1}\circ\varphi_{5}$)$\circ\varphi_{1}$ = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{2}\circ$($\varphi_{2}\circ\varphi_{1}$) = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{2}\circ\varphi_{2}$)$\circ\varphi_{1}$ = $\varphi_{e}\circ\varphi_{1}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{2}\circ\varphi_{3}$) = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{2}\circ\varphi_{2}$)$\circ\varphi_{3}$ = $\varphi_{e}\circ\varphi_{3}$ = $\varphi_{3}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{2}\circ\varphi_{4}$) = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{2}\circ\varphi_{2}$)$\circ\varphi_{4}$ = $\varphi_{e}\circ\varphi_{4}$ = $\varphi_{4}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{2}\circ\varphi_{5}$) = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{2}\circ\varphi_{2}$)$\circ\varphi_{5}$ = $\varphi_{e}\circ\varphi_{5}$ = $\varphi_{5}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{2}\circ$($\varphi_{1}\circ\varphi_{2}$) = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{2}\circ\varphi_{1}$)$\circ\varphi_{2}$ = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{3}\circ\varphi_{2}$) = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{2}\circ\varphi_{3}$)$\circ\varphi_{2}$ = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{4}\circ\varphi_{2}$) = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{2}\circ\varphi_{4}$)$\circ\varphi_{2}$ = $\varphi_{3}\circ\varphi_{2}$ = $\varphi_{5}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{5}\circ\varphi_{2}$) = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{2}\circ\varphi_{5}$)$\circ\varphi_{2}$ = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{3}\circ$($\varphi_{3}\circ\varphi_{1}$) = $\varphi_{3}\circ\varphi_{4}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{3}\circ\varphi_{3}$)$\circ\varphi_{1}$ = $\varphi_{e}\circ\varphi_{1}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{3}\circ\varphi_{2}$) = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{3}\circ\varphi_{3}$)$\circ\varphi_{2}$ = $\varphi_{e}\circ\varphi_{2}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{3}\circ\varphi_{4}$) = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{3}\circ\varphi_{3}$)$\circ\varphi_{4}$ = $\varphi_{e}\circ\varphi_{4}$ = $\varphi_{4}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{3}\circ\varphi_{5}$) = $\varphi_{3}\circ\varphi_{2}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{3}\circ\varphi_{3}$)$\circ\varphi_{5}$ = $\varphi_{e}\circ\varphi_{5}$ = $\varphi_{5}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{3}\circ$($\varphi_{1}\circ\varphi_{3}$) = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{3}\circ\varphi_{1}$)$\circ\varphi_{3}$ = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{2}\circ\varphi_{3}$) = $\varphi_{3}\circ\varphi_{4}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{3}\circ\varphi_{2}$)$\circ\varphi_{3}$ = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{4}\circ\varphi_{3}$) = $\varphi_{3}\circ\varphi_{2}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{3}\circ\varphi_{4}$)$\circ\varphi_{3}$ = $\varphi_{1}\circ\varphi_{3}$ = $\varphi_{5}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{5}\circ\varphi_{3}$) = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{3}\circ\varphi_{5}$)$\circ\varphi_{3}$ = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{4}\circ$($\varphi_{4}\circ\varphi_{1}$) = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{4}\circ\varphi_{4}$)$\circ\varphi_{1}$ = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{4}\circ\varphi_{2}$) = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{4}\circ\varphi_{4}$)$\circ\varphi_{2}$ = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{4}\circ\varphi_{3}$) = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{4}\circ\varphi_{4}$)$\circ\varphi_{3}$ = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{4}\circ\varphi_{5}$) = $\varphi_{4}\circ\varphi_{e}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{4}\circ\varphi_{4}$)$\circ\varphi_{5}$ = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{4}\circ$($\varphi_{1}\circ\varphi_{4}$) = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{4}\circ\varphi_{1}$)$\circ\varphi_{4}$ = $\varphi_{3}\circ\varphi_{4}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{2}\circ\varphi_{4}$) = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{4}\circ\varphi_{2}$)$\circ\varphi_{4}$ = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{3}\circ\varphi_{4}$) = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{4}\circ\varphi_{3}$)$\circ\varphi_{4}$ = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{5}\circ\varphi_{4}$) = $\varphi_{4}\circ\varphi_{e}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{4}\circ\varphi_{5}$)$\circ\varphi_{4}$ = $\varphi_{e}\circ\varphi_{4}$ = $\varphi_{4}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{5}\circ$($\varphi_{5}\circ\varphi_{1}$) = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{5}\circ\varphi_{5}$)$\circ\varphi_{1}$ = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{5}\circ\varphi_{2}$) = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{5}\circ\varphi_{5}$)$\circ\varphi_{2}$ = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{5}\circ\varphi_{3}$) = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{5}\circ\varphi_{5}$)$\circ\varphi_{3}$ = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{5}\circ\varphi_{4}$) = $\varphi_{5}\circ\varphi_{e}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{5}\circ\varphi_{5}$)$\circ\varphi_{4}$ = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{5}\circ$($\varphi_{1}\circ\varphi_{5}$) = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{5}\circ\varphi_{1}$)$\circ\varphi_{5}$ = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{2}\circ\varphi_{5}$) = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{5}\circ\varphi_{2}$)$\circ\varphi_{5}$ = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{3}\circ\varphi_{5}$) = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{5}\circ\varphi_{3}$)$\circ\varphi_{5}$ = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{4}\circ\varphi_{5}$) = $\varphi_{5}\circ\varphi_{e}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{5}\circ\varphi_{4}$)$\circ\varphi_{5}$ = $\varphi_{e}\circ\varphi_{5}$ = $\varphi_{5}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{1}\circ$($\varphi_{2}\circ\varphi_{3}$) = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{1}\circ\varphi_{2}$)$\circ\varphi_{3}$ = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{1}\circ$($\varphi_{2}\circ\varphi_{4}$) = $\varphi_{1}\circ\varphi_{3}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{1}\circ\varphi_{2}$)$\circ\varphi_{4}$ = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
+					\newline
+					\newline
+					$\varphi_{1}\circ$($\varphi_{2}\circ\varphi_{5}$) = $\varphi_{1}\circ\varphi_{1}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{1}\circ\varphi_{2}$)$\circ\varphi_{5}$ = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{1}\circ$($\varphi_{3}\circ\varphi_{2}$) = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{1}\circ\varphi_{3}$)$\circ\varphi_{2}$ = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
+					\newline
+					\newline
+					$\varphi_{1}\circ$($\varphi_{3}\circ\varphi_{4}$) = $\varphi_{1}\circ\varphi_{1}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{1}\circ\varphi_{3}$)$\circ\varphi_{4}$ = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
+					\newline
+					\newline
+					$\varphi_{1}\circ$($\varphi_{3}\circ\varphi_{5}$) = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{1}\circ\varphi_{3}$)$\circ\varphi_{5}$ = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{1}\circ$($\varphi_{4}\circ\varphi_{2}$) = $\varphi_{1}\circ\varphi_{1}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{1}\circ\varphi_{4}$)$\circ\varphi_{2}$ = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
+					\newline
+					\newline
+					$\varphi_{1}\circ$($\varphi_{4}\circ\varphi_{3}$) = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{1}\circ\varphi_{4}$)$\circ\varphi_{3}$ = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
+					\newline
+					\newline
+					$\varphi_{1}\circ$($\varphi_{4}\circ\varphi_{5}$) = $\varphi_{1}\circ\varphi_{e}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{1}\circ\varphi_{4}$)$\circ\varphi_{5}$ = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{2}\circ$($\varphi_{1}\circ\varphi_{3}$) = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{2}\circ\varphi_{1}$)$\circ\varphi_{3}$ = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{1}\circ\varphi_{4}$) = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{2}\circ\varphi_{1}$)$\circ\varphi_{4}$ = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{1}\circ\varphi_{5}$) = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{2}\circ\varphi_{1}$)$\circ\varphi_{5}$ = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{2}\circ$($\varphi_{3}\circ\varphi_{1}$) = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{2}\circ\varphi_{3}$)$\circ\varphi_{1}$ = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{3}\circ\varphi_{4}$) = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{2}\circ\varphi_{3}$)$\circ\varphi_{4}$ = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{3}\circ\varphi_{5}$) = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{2}\circ\varphi_{3}$)$\circ\varphi_{5}$ = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{2}\circ$($\varphi_{4}\circ\varphi_{1}$) = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{2}\circ\varphi_{4}$)$\circ\varphi_{1}$ = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{4}\circ\varphi_{3}$) = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{2}\circ\varphi_{4}$)$\circ\varphi_{3}$ = $\varphi_{3}\circ\varphi_{3}$ = $\varphi_{e}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{4}\circ\varphi_{5}$) = $\varphi_{2}\circ\varphi_{e}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{2}\circ\varphi_{4}$)$\circ\varphi_{5}$ = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{2}\circ$($\varphi_{5}\circ\varphi_{1}$) = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{2}\circ\varphi_{5}$)$\circ\varphi_{1}$ = $\varphi_{1}\circ\varphi_{1}$ = $\varphi_{e}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{5}\circ\varphi_{3}$) = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{2}\circ\varphi_{5}$)$\circ\varphi_{3}$ = $\varphi_{1}\circ\varphi_{3}$ = $\varphi_{5}$
+					\newline
+					\newline
+					$\varphi_{2}\circ$($\varphi_{5}\circ\varphi_{4}$) = $\varphi_{2}\circ\varphi_{e}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{2}\circ\varphi_{5}$)$\circ\varphi_{4}$ = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{3}\circ$($\varphi_{1}\circ\varphi_{2}$) = $\varphi_{3}\circ\varphi_{4}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{3}\circ\varphi_{1}$)$\circ\varphi_{2}$ = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{1}\circ\varphi_{4}$) = $\varphi_{3}\circ\varphi_{2}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{3}\circ\varphi_{1}$)$\circ\varphi_{4}$ = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{1}\circ\varphi_{5}$) = $\varphi_{3}\circ\varphi_{3}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{3}\circ\varphi_{1}$)$\circ\varphi_{5}$ = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{3}\circ$($\varphi_{2}\circ\varphi_{1}$) = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{3}\circ\varphi_{2}$)$\circ\varphi_{1}$ = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{2}\circ\varphi_{4}$) = $\varphi_{3}\circ\varphi_{3}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{3}\circ\varphi_{2}$)$\circ\varphi_{4}$ = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{2}\circ\varphi_{5}$) = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{3}\circ\varphi_{2}$)$\circ\varphi_{5}$ = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{3}\circ$($\varphi_{4}\circ\varphi_{1}$) = $\varphi_{3}\circ\varphi_{3}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{3}\circ\varphi_{4}$)$\circ\varphi_{1}$ = $\varphi_{1}\circ\varphi_{1}$ = $\varphi_{e}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{4}\circ\varphi_{2}$) = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{3}\circ\varphi_{4}$)$\circ\varphi_{2}$ = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{4}\circ\varphi_{5}$) = $\varphi_{3}\circ\varphi_{e}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{3}\circ\varphi_{4}$)$\circ\varphi_{5}$ = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{3}\circ$($\varphi_{5}\circ\varphi_{1}$) = $\varphi_{3}\circ\varphi_{2}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{3}\circ\varphi_{5}$)$\circ\varphi_{1}$ = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{5}\circ\varphi_{2}$) = $\varphi_{3}\circ\varphi_{3}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{3}\circ\varphi_{5}$)$\circ\varphi_{2}$ = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
+					\newline
+					\newline
+					$\varphi_{3}\circ$($\varphi_{5}\circ\varphi_{4}$) = $\varphi_{3}\circ\varphi_{e}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{3}\circ\varphi_{5}$)$\circ\varphi_{4}$ = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{4}\circ$($\varphi_{1}\circ\varphi_{2}$) = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{4}\circ\varphi_{1}$)$\circ\varphi_{2}$ = $\varphi_{3}\circ\varphi_{2}$ = $\varphi_{5}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{1}\circ\varphi_{3}$) = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{4}\circ\varphi_{1}$)$\circ\varphi_{3}$ = $\varphi_{3}\circ\varphi_{3}$ = $\varphi_{e}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{1}\circ\varphi_{5}$) = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{4}\circ\varphi_{1}$)$\circ\varphi_{5}$ = $\varphi_{3}\circ\varphi_{5}$ = $\varphi_{2}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{4}\circ$($\varphi_{2}\circ\varphi_{1}$) = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{4}\circ\varphi_{2}$)$\circ\varphi_{1}$ = $\varphi_{1}\circ\varphi_{1}$ = $\varphi_{e}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{2}\circ\varphi_{3}$) = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{4}\circ\varphi_{2}$)$\circ\varphi_{3}$ = $\varphi_{1}\circ\varphi_{3}$ = $\varphi_{5}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{2}\circ\varphi_{5}$) = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{4}\circ\varphi_{2}$)$\circ\varphi_{5}$ = $\varphi_{1}\circ\varphi_{5}$ = $\varphi_{3}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{4}\circ$($\varphi_{3}\circ\varphi_{1}$) = $\varphi_{4}\circ\varphi_{4}$ = $\varphi_{5}$
+					\newline
+					($\varphi_{4}\circ\varphi_{3}$)$\circ\varphi_{1}$ = $\varphi_{2}\circ\varphi_{1}$ = $\varphi_{5}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{3}\circ\varphi_{2}$) = $\varphi_{4}\circ\varphi_{5}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{4}\circ\varphi_{3}$)$\circ\varphi_{2}$ = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{3}\circ\varphi_{5}$) = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{4}\circ\varphi_{3}$)$\circ\varphi_{5}$ = $\varphi_{2}\circ\varphi_{5}$ = $\varphi_{1}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{4}\circ$($\varphi_{5}\circ\varphi_{1}$) = $\varphi_{4}\circ\varphi_{2}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{4}\circ\varphi_{5}$)$\circ\varphi_{1}$ = $\varphi_{e}\circ\varphi_{1}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{5}\circ\varphi_{2}$) = $\varphi_{4}\circ\varphi_{3}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{4}\circ\varphi_{5}$)$\circ\varphi_{2}$ = $\varphi_{e}\circ\varphi_{2}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{4}\circ$($\varphi_{5}\circ\varphi_{3}$) = $\varphi_{4}\circ\varphi_{1}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{4}\circ\varphi_{5}$)$\circ\varphi_{3}$ = $\varphi_{e}\circ\varphi_{3}$ = $\varphi_{3}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{5}\circ$($\varphi_{1}\circ\varphi_{2}$) = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{5}\circ\varphi_{1}$)$\circ\varphi_{2}$ = $\varphi_{2}\circ\varphi_{2}$ = $\varphi_{e}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{1}\circ\varphi_{3}$) = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{5}\circ\varphi_{1}$)$\circ\varphi_{3}$ = $\varphi_{2}\circ\varphi_{3}$ = $\varphi_{4}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{1}\circ\varphi_{4}$) = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{5}\circ\varphi_{1}$)$\circ\varphi_{4}$ = $\varphi_{2}\circ\varphi_{4}$ = $\varphi_{3}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{5}\circ$($\varphi_{2}\circ\varphi_{1}$) = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{5}\circ\varphi_{2}$)$\circ\varphi_{1}$ = $\varphi_{3}\circ\varphi_{1}$ = $\varphi_{4}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{2}\circ\varphi_{3}$) = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{5}\circ\varphi_{2}$)$\circ\varphi_{3}$ = $\varphi_{3}\circ\varphi_{3}$ = $\varphi_{e}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{2}\circ\varphi_{4}$) = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{5}\circ\varphi_{2}$)$\circ\varphi_{4}$ = $\varphi_{3}\circ\varphi_{4}$ = $\varphi_{1}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{5}\circ$($\varphi_{3}\circ\varphi_{1}$) = $\varphi_{5}\circ\varphi_{4}$ = $\varphi_{e}$
+					\newline
+					($\varphi_{5}\circ\varphi_{3}$)$\circ\varphi_{1}$ = $\varphi_{1}\circ\varphi_{1}$ = $\varphi_{e}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{3}\circ\varphi_{2}$) = $\varphi_{5}\circ\varphi_{5}$ = $\varphi_{4}$
+					\newline
+					($\varphi_{5}\circ\varphi_{3}$)$\circ\varphi_{2}$ = $\varphi_{1}\circ\varphi_{2}$ = $\varphi_{4}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{3}\circ\varphi_{4}$) = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{5}\circ\varphi_{3}$)$\circ\varphi_{4}$ = $\varphi_{1}\circ\varphi_{4}$ = $\varphi_{2}$
+					\newline
+					\newline
+					%
+					%
+					$\varphi_{5}\circ$($\varphi_{4}\circ\varphi_{1}$) = $\varphi_{5}\circ\varphi_{3}$ = $\varphi_{1}$
+					\newline
+					($\varphi_{5}\circ\varphi_{4}$)$\circ\varphi_{1}$ = $\varphi_{e}\circ\varphi_{1}$ = $\varphi_{1}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{4}\circ\varphi_{2}$) = $\varphi_{5}\circ\varphi_{1}$ = $\varphi_{2}$
+					\newline
+					($\varphi_{5}\circ\varphi_{4}$)$\circ\varphi_{2}$ = $\varphi_{e}\circ\varphi_{2}$ = $\varphi_{2}$
+					\newline
+					\newline
+					$\varphi_{5}\circ$($\varphi_{4}\circ\varphi_{3}$) = $\varphi_{5}\circ\varphi_{2}$ = $\varphi_{3}$
+					\newline
+					($\varphi_{5}\circ\varphi_{4}$)$\circ\varphi_{3}$ = $\varphi_{e}\circ\varphi_{3}$ = $\varphi_{3}$
+					\newline
+					\newline
+					%
+					%
+					\textbf{3.-}
+					Es claro que $\varphi_{e}$ cumple $\forall$ $\varphi_{a}$ $\in$ $G$, $\varphi_{e}\circ\varphi_{a}$ = $\varphi_{a}\circ\varphi_{e}$ = a (con la composición como producto)
+					\newline
+					\newline
+					\textbf{4.-}
+					Sea $\varphi_{a}$ $\in$ $G$, $\therefore$ $\varphi_{a}$ es una aplicación biyectiva de A en A, $\therefore$ $\exists$ $\varphi_{a}^{-1}$ : $\varphi_{a}\circ\varphi_{a}^{-1}$ = $\varphi_{I}$. $\varphi_{a}^{-1}$ también es una aplicación biyectova de A en A, $\therefore$ $\varphi_{a}^{-1}$ $\in$ $G$
+					\newline
 				\end{proof}
-			\end{lem}.
-			\newline
-			\textbf{Problemas}.
-			\newline
-			\newline
-			\textbf{1.} Determine, en cada caso uno de los siguientes casos, si el sistema descrito es o no grupo.
-			\newline
-			\begin{enumerate}[a)]
-				\item $G$ = $\mathbb{Z}$, a·b = a-b
-					\newline
+			\subsection{Algunos lemas preliminares}
+				\begin{lem}
+					Si $G$ es un grupo, entonces:
+					\begin{enumerate}
+						\item $\exists!$ e $\in$ $G$ : $\forall$ a $\in$ $G$ a·e = e·a = a
+						\item $\forall$ a $\in$ $G$ $\exists!$ $a^{-1}$ $\in$ $G$ : a·$a^{-1}$ = e
+						\item $\forall$ a $\in$ $G$ ($a^{-1}$)$^{-1}$ = a
+						\item $\forall$ a,b $\in$ $G$ (a·b)$^{-1}$ = $b^{-1}$·$a^{-1}$
+					\end{enumerate}
 					\begin{proof}:
 						\newline
-						\begin{enumerate}[1.]
-							\item Sean a,b $\in$ $G$, a·b $\in$ $G$ $\iff$ a-b $\in$ $\mathbb{Z}$ con a,b $\in$ $\mathbb{Z}$
-							\item Sean a,b,c $\in$ $G$, a·(b·c) = (a·b)·c $\iff$ a-(b-c) = (a-b)-c con a,b,c $\in$ $Z$
-							\item $\exists$ e $\in$ $G$ : a·e = e·a = a $\forall$ a $\in$ $G$ $\iff$ $\exists$ e $\in$ $\mathbb{Z}$ : a-e = e-a = a $\forall$ a $\in$ $\mathbb{Z}$(el 0 cumple)
-							\item $\exists$ $a^{-1}$ $\in$ $G$ : a·$a^{-1}$ = $a^{-1}$·a = e $\forall$ a $\in$ $G$ $\iff$ $\exists$ $a^{-1}$ $\in$ $\mathbb{Z}$ : $a^{-1}$-a = a-$a^{-1}$ = e $\forall$ a $\in$ $\mathbb{Z}$(a cumple)
-						\end{enumerate}
-					\end{proof}.
-				\newline
-				\item $G$ = $\mathbb{Z}^{+}$, a·b = ab
-					\newline
-					\begin{proof}:
+						Sea $G$ un grupo
 						\newline
-						\begin{enumerate}[1.]
-							\item Sean a,b $\in$ $G$, a·b $\in$ $G$ $\iff$ ab $\in$ $\mathbb{Z}^{+}$ con a,b $\in$ $\mathbb{Z}^{+}$
-							\item Sean a,b,c $\in$ $G$, a·(b·c) = (a·b)·c $\iff$ a(bc) = (ab)c con a,b,c $\in$ $\mathbb{Z}^{+}$
-							\item $\exists$ e $\in$ $G$ : a·e = e·a = a $\forall$ a $\in$ $G$ $\iff$ $\exists$ e $\in$ $\mathbb{Z}^{+}$ : ae = ea = a $\forall$ a $\in$ $\mathbb{Z}^{+}$(el 1 cumple)
-							\item $\exists$ $a^{-1}$ $\in$ $G$ : a·$a^{-1}$ = $a^{-1}$·a = e $\forall$ a $\in$ $G$ $\iff$ $\exists$ $a^{-1}$ $\in$ $\mathbb{Z}^{-1}$ : $a^{-1}$a = a$a^{-1}$ = e $\forall$ a $\in$ $\mathbb{Z}^{+}$, pero $\exists!$ $a^{-1}$ $\in$ $\mathbb{Z}^{+}$ con estas propiedades
-						\end{enumerate}
-						$\therefore$ G no es un Grupo
-					\end{proof}.
-				\newline
-				\item G := \{ $a_{i}$ : 0 $\leq$ $i$ $\leq$ 6, $a_i$·$a_j$ = $a_{i+j}$ si $i$ < $j$, $a_i$·$a_j$ = $a_{i+j-7}$ si $i+j$ $\geq$ 7 \}, a·b = a+b
-					\newline
-					Es claro que es Grupo, pues es otra manera de definir un $\mathbb{Z}_{[7]}$
-				\newline
-				\item G := \{ x $\in$ $G$ : x = $\frac{a}{b}$ $\in$ $G$, a,b $\in$ $\mathbb{Q}$ $\wedge$ b es impar  \}
-					\newline
-					\begin{proof}:
 						\newline
-						\begin{enumerate}[1.]
-							\item Sean a,b $\in$ $G$ a·b $\in$ $G$, con a = $\frac{a_1}{a_2}$ y b = $\frac{b_1}{b_2}$, $\iff$ $\frac{a_1}{a_2}$+$\frac{b_1}{b_2}$ = c $\in$ $\mathbb{Q}$ $\iff$ $\frac{(a_1b_2)+(b_1a_2)}{a_2b_2}$ = c $\in$ $G$ $\iff$ ($(a_1b_2)+(b_1a_2)$),($a_2b_2$) $\in$ $G$ $\wedge$ $a_2b_2$ es impar, como $a_1$, $a_2$, $b_1$, $b_2$ $\in$ $\mathbb{Z}$ $\Rightarrow$ ($a_1b_2$), ($b_1a_2$) $\in$ $\mathbb{Z}$ $\Rightarrow$ ($a_1b_2$)+($b_1a_2$) $\in$ $\mathbb{Z}$, Ahora como $a_2$ y $b_2$ $\in$ $G$ $\wedge$ $a_2$, $b_2$ son impares $\Rightarrow$ $a_2$$b_2$ es impar $\therefore$ c $\in$ $G$
-							\newline
-							\item Sean a=$\frac{a_1}{a_2}$, b=$\frac{b_1}{b_2}$, c=$\frac{c_1}{c_2}$ $\in$ G a·(b·c) = (a·b)·c 
-							$\iff$
-							 $\frac{a_1}{a_2}$+$\frac{b_1}{b_2}$+$\frac{c_1}{c_2}$ = $\frac{a_1}{a_2}$+$\frac{b_1}{b_2}$+$\frac{c_1}{c_2}$ 
-							 $\iff$ 
-							 $\frac{a_1}{a_2}$+$\frac{(b_1c_2) + (c_1b_2)}{b_2c_2}$ = $\frac{(a_1b_2) + (b_1a_2)}{a_2b_2}$+$\frac{c_1}{c_2}$ 
-							 $\iff$ 
-							 $\frac{a_1(b_2c_2) + ((b_1c_2) + (c_1b_2))a_2}{a_2(b_2c_2)}$ = $\frac{((a_1b_2) + (b_1a_2))c_2 + c_1(a_2b_2)}{(a_2b_2)c_2}$ 
-							 $\iff$
-							 $\frac{a_1b_2c_2 + b_1c_2a_2 + c_1b_2a_2}{a_2b_2c_2}$ = $\frac{a_1b_2c_2 + b_1a_2c_2 + c_1a_2b_2}{a_2b_2c_2}$, Sabemos que se cumple pues $a_1$, $a_2$, $b_1$, $b_2$, $c_1$, $c_2$ $\in$ $\mathbb{Z}$-\{0\} y como $a_2$, $b_2$, $c_2$ son impares $\Rightarrow$ $a_2b_2c_2$ es impar
-							 \newline
-							 \item Sea a = $\frac{a_1}{a_2}$ $\in$ $G$ $\Rightarrow$ $\exists$ e $\in$ $G$ : a·e = e·a = a $\iff$ $\exists$ e $\in$ $\mathbb{Q}$ : $\frac{a_1}{a_2}$ + e = e + $\frac{a_1}{a_2}$ = $\frac{a_1}{a_2}$, 0 cumple y admás 0 $\in$ $G$ pues 0 = $\frac{0}{3}$ $\in$ $G$
-							 \newline
-							 \item Sea a = $\frac{a_1}{a_2}$ $\in$ $G$ $\Rightarrow$ $\exists$ $a^{-1}$ $\in$ $G$ : $a_1$·$a^{-1}$ = $a^{-1}$·$a_1$ = e $\iff$ $\exists$ $\frac{b_1}{b_2}$ $\in$ $\mathbb{Q}$ : $\frac{a_1}{a_2}$ + $\frac{b_1}{b_2}$ = $\frac{b_1}{b_2}$ + $\frac{a_1}{a_2}$ = e $\wedge$ $b_2$ es impar, -$\frac{a_1}{a_2}$ cumple
-						\end{enumerate}
+						\textbf{1.} Sean $e_{1}$, $e_{2}$ $\in$ $G$ : $\forall$ a $\in$ $G$ $e_{1}$·a = a·$e_{1}$ = a y $e_{2}$·a = a·$e_{2}$ = a. Ahora $e_{1}$ = $e_{1}$ y $e_{1}$·$e_{2}$ = $e_{1}$ $\Rightarrow$ $e_{1}$ = $e_{1}$·$e_{2}$ ,  pero también se cumple que $e_{1}$·$e_{2}$ = $e_{2}$
+						\newline
+						$\therefore$ $e_{1}$ = $e_{2}$
+						\newline
+						\newline
+						\textbf{2.} Sean a,$a_{1}^{-1}$, $a_{2}^{-1}$ $\in$ $G$ : a·$a_{1}^{-1}$ = $a_{1}^{-1}$·a = e y a·$a_{2}^{-1}$ = $a_{2}^{-1}$·a = e. Ahora $a_{1}^{-1}$ = e·$a_{1}^{-1}$ $\Rightarrow$ $a_{1}^{-1}$ = ($a_{2}^{-1}$·a)·$a_{1}^{-1}$ $\Rightarrow$ como $G$ es grupo $a_{1}^{-1}$ = $a_{2}^{-1}$·(a·$a_{1}^{-1}$) $\Rightarrow$ $a_{1}^{-1}$ = $a_{2}^{-1}$·e 
+						\newline
+						$\therefore$ $a_{1}^{-1}$ = $a_{2}^{-1}$
+						\newline
+						\newline
+						\textbf{3.} Sea a $\in$ $G$ tenemos que a·$a^{-1}$ = e y $a^{-1}$·($a^{-1}$)$^{-1}$ = e $\Rightarrow$ multiplicando por ($a^{-1}$)$^{-1}$ tenemos: (a·$a^{-1}$)·($a^{-1}$)$^{-1}$ = ($a^{-1}$)$^{-1}$ y ($a^{-1}$)$^{-1}$·($a^{-1}$·($a^{-1}$)$^{-1}$) = ($a^{-1}$)$^{-1}$ $\Rightarrow$ (a·$a^{-1}$)·($a^{-1}$)$^{-1}$ = ($a^{-1}$)$^{-1}$·($a^{-1}$·($a^{-1}$)$^{-1}$) $\Rightarrow$ como $G$ es grupo a·($a^{-1}$·($a^{-1}$)$^{-1}$) = (($a^{-1}$)$^{-1}$·$a^{-1}$)·($a^{-1}$)$^{-1}$ $\Rightarrow$ a·e = e·($a^{-1}$)$^{-1}$ $\therefore$ a = ($a^{-1}$)$^{-1}$
+						\newline
+						\newline
+						\textbf{4.} Sean a,b $\in$ $G$
+						\newline
+						($a$·$b$)$^{-1}$·(a·b) = (a·b)·($a$·$b$)$^{-1}$ = e $\Rightarrow$ ($a$·$b$)$^{-1}$ = $b^{-1}$·$a^{-1}$ $\iff$ ($b^{-1}$·$a^{-1}$)·(a·b) = (a·b)·($b^{-1}$·$a^{-1}$) = e $\iff$ (($b^{-1}$·$a^{-1}$)·a)·b = a·(b·($b^{-1}$·$a^{-1}$)) = e $\iff$ ($b^{-1}$·($a^{-1}$·a))·b = a·((b·$b^{-1}$)·$a^{-1}$) = e $\iff$ ($b^{-1}$·e)·b = a·(e·$a^{-1}$) = e $\iff$ $b^{-1}$·b = a·$a^{-1}$ = e $\iff$ e = e = e
 					\end{proof}
-			\end{enumerate}
-
+				\end{lem}
+				\begin{lem} Dados a,b en el grupo G $\Rightarrow$ las ecuaciones a·x = b y y·a = b tienen soluciones únicas para x y y en G. En particular, las dos leyes de cancelación
+					\begin{enumerate}[1)]
+						\item a·u = a·w $\Rightarrow$ u = w
+						\item u·a = w·a $\Rightarrow$ u = w
+					\end{enumerate}.
+					\newline
+					\begin{proof}:
+						\newline
+						\textbf{1)} Sean a,b,c $\in$ $G$ : a·b = a·c $\Rightarrow$ $a^{-1}$·(a·b) = $a^{-1}$·(a·c) $\Rightarrow$ ($a^{-1}$·a)·b = ($a^{-1}$·a)·c $\Rightarrow$ e·b = e·c $\therefore$ b = c
+						\newline
+						\newline
+						\textbf{2)} Sean a,b,c $\in$ $G$ : b·a = c·a $\Rightarrow$ (b·a)·$a^{-1}$ = (c·a)·$a^{-1}$ $\Rightarrow$ b·(a·$a^{-1}$) = c·(a·$a^{-1}$) $\Rightarrow$ b·e = c·e $\therefore$ b = c
+					\end{proof}
+				\end{lem}.
+				\newline
+				\newline
+				\textbf{Problemas}.
+				\newline
+				\begin{enumerate}[1.]
+					\item Determine, en cada caso uno de los siguientes casos, si el sistema descrito es o no grupo.
+						\newline
+						\begin{enumerate}[a)]
+							\item $G$ = $\mathbb{Z}$, a·b = a-b
+								\newline
+								\begin{proof}:
+									\newline
+									\begin{enumerate}[1.]
+										\item Sean a,b $\in$ $G$, a·b $\in$ $G$ $\iff$ a-b $\in$ $\mathbb{Z}$ con a,b $\in$ $\mathbb{Z}$
+										\item Sean a,b,c $\in$ $G$, a·(b·c) = (a·b)·c $\iff$ a-(b-c) = (a-b)-c con a,b,c $\in$ $Z$
+										\item $\exists$ e $\in$ $G$ : a·e = e·a = a $\forall$ a $\in$ $G$ $\iff$ $\exists$ e $\in$ $\mathbb{Z}$ : a-e = e-a = a $\forall$ a $\in$ $\mathbb{Z}$(el 0 cumple)
+										\item $\exists$ $a^{-1}$ $\in$ $G$ : a·$a^{-1}$ = $a^{-1}$·a = e $\forall$ a $\in$ $G$ $\iff$ $\exists$ $a^{-1}$ $\in$ $\mathbb{Z}$ : $a^{-1}$-a = a-$a^{-1}$ = e $\forall$ a $\in$ $\mathbb{Z}$(a cumple)
+									\end{enumerate}
+								\end{proof}.
+							\newline
+							\item $G$ = $\mathbb{Z}^{+}$, a·b = ab
+								\newline
+								\begin{proof}:
+									\newline
+									\begin{enumerate}[1.]
+										\item Sean a,b $\in$ $G$, a·b $\in$ $G$ $\iff$ ab $\in$ $\mathbb{Z}^{+}$ con a,b $\in$ $\mathbb{Z}^{+}$
+										\item Sean a,b,c $\in$ $G$, a·(b·c) = (a·b)·c $\iff$ a(bc) = (ab)c con a,b,c $\in$ $\mathbb{Z}^{+}$
+										\item $\exists$ e $\in$ $G$ : a·e = e·a = a $\forall$ a $\in$ $G$ $\iff$ $\exists$ e $\in$ $\mathbb{Z}^{+}$ : ae = ea = a $\forall$ a $\in$ $\mathbb{Z}^{+}$(el 1 cumple)
+										\item $\exists$ $a^{-1}$ $\in$ $G$ : a·$a^{-1}$ = $a^{-1}$·a = e $\forall$ a $\in$ $G$ $\iff$ $\exists$ $a^{-1}$ $\in$ $\mathbb{Z}^{-1}$ : $a^{-1}$a = a$a^{-1}$ = e $\forall$ a $\in$ $\mathbb{Z}^{+}$, pero $\exists!$ $a^{-1}$ $\in$ $\mathbb{Z}^{+}$ con estas propiedades
+									\end{enumerate}
+									$\therefore$ G no es un Grupo
+								\end{proof}.
+							\newline
+							\item G := \{ $a_{i}$ : 0 $\leq$ $i$ $\leq$ 6, $a_i$·$a_j$ = $a_{i+j}$ si $i$ < $j$, $a_i$·$a_j$ = $a_{i+j-7}$ si $i+j$ $\geq$ 7 \}, a·b = a+b
+								\newline
+								Es claro que es Grupo, pues es otra manera de definir un $\mathbb{Z}_{[7]}$
+							\newline
+							\item G := \{ x $\in$ $G$ : x = $\frac{a}{b}$ $\in$ $G$, a,b $\in$ $\mathbb{Q}$ $\wedge$ b es impar  \}
+								\newline
+								\begin{proof}:
+									\newline
+									\begin{enumerate}[1.]
+										\item Sean a,b $\in$ $G$ a·b $\in$ $G$, con a = $\frac{a_1}{a_2}$ y b = $\frac{b_1}{b_2}$, $\iff$ $\frac{a_1}{a_2}$+$\frac{b_1}{b_2}$ = c $\in$ $\mathbb{Q}$ $\iff$ $\frac{(a_1b_2)+(b_1a_2)}{a_2b_2}$ = c $\in$ $G$ $\iff$ ($(a_1b_2)+(b_1a_2)$),($a_2b_2$) $\in$ $G$ $\wedge$ $a_2b_2$ es impar, como $a_1$, $a_2$, $b_1$, $b_2$ $\in$ $\mathbb{Z}$ $\Rightarrow$ ($a_1b_2$), ($b_1a_2$) $\in$ $\mathbb{Z}$ $\Rightarrow$ ($a_1b_2$)+($b_1a_2$) $\in$ $\mathbb{Z}$, Ahora como $a_2$ y $b_2$ $\in$ $G$ $\wedge$ $a_2$, $b_2$ son impares $\Rightarrow$ $a_2$$b_2$ es impar $\therefore$ c $\in$ $G$
+										\newline
+										\item Sean a=$\frac{a_1}{a_2}$, b=$\frac{b_1}{b_2}$, c=$\frac{c_1}{c_2}$ $\in$ G a·(b·c) = (a·b)·c 
+										$\iff$
+										 $\frac{a_1}{a_2}$+$\frac{b_1}{b_2}$+$\frac{c_1}{c_2}$ = $\frac{a_1}{a_2}$+$\frac{b_1}{b_2}$+$\frac{c_1}{c_2}$ 
+										 $\iff$ 
+										 $\frac{a_1}{a_2}$+$\frac{(b_1c_2) + (c_1b_2)}{b_2c_2}$ = $\frac{(a_1b_2) + (b_1a_2)}{a_2b_2}$+$\frac{c_1}{c_2}$ 
+										 $\iff$ 
+										 $\frac{a_1(b_2c_2) + ((b_1c_2) + (c_1b_2))a_2}{a_2(b_2c_2)}$ = $\frac{((a_1b_2) + (b_1a_2))c_2 + c_1(a_2b_2)}{(a_2b_2)c_2}$ 
+										 $\iff$
+										 $\frac{a_1b_2c_2 + b_1c_2a_2 + c_1b_2a_2}{a_2b_2c_2}$ = $\frac{a_1b_2c_2 + b_1a_2c_2 + c_1a_2b_2}{a_2b_2c_2}$, Sabemos que se cumple pues $a_1$, $a_2$, $b_1$, $b_2$, $c_1$, $c_2$ $\in$ $\mathbb{Z}$-\{0\} y como $a_2$, $b_2$, $c_2$ son impares $\Rightarrow$ $a_2b_2c_2$ es impar
+										 \newline
+										 \item Sea a = $\frac{a_1}{a_2}$ $\in$ $G$ $\Rightarrow$ $\exists$ e $\in$ $G$ : a·e = e·a = a $\iff$ $\exists$ e $\in$ $\mathbb{Q}$ : $\frac{a_1}{a_2}$ + e = e + $\frac{a_1}{a_2}$ = $\frac{a_1}{a_2}$, 0 cumple y admás 0 $\in$ $G$ pues 0 = $\frac{0}{3}$ $\in$ $G$
+										 \newline
+										 \item Sea a = $\frac{a_1}{a_2}$ $\in$ $G$ $\Rightarrow$ $\exists$ $a^{-1}$ $\in$ $G$ : $a_1$·$a^{-1}$ = $a^{-1}$·$a_1$ = e $\iff$ $\exists$ $\frac{b_1}{b_2}$ $\in$ $\mathbb{Q}$ : $\frac{a_1}{a_2}$ + $\frac{b_1}{b_2}$ = $\frac{b_1}{b_2}$ + $\frac{a_1}{a_2}$ = e $\wedge$ $b_2$ es impar, -$\frac{a_1}{a_2}$ cumple
+									\end{enumerate}
+								\end{proof}
+						\end{enumerate}
+					\item Si $G$ es un Grupo abeliano $\Rightarrow$ $\forall$ a,b $\in$ $G$ y $\forall$ n $\in$ $\mathbb{N}$ (a·b)$^n$ = $a^n$·$b^n$
+					\begin{proof}
+						Sean a,b $\in$ $G$ grupo abeliano y n $\in$ $\mathbb{N}$
+						\newline
+						n = 2
+						\newline
+						(a·b)$^2$ = (a·b)·(a·b) = a·(b·(a·b)) = a·(b·(b·a)) = a·($b^2$·a) = a·(a·$b^2$) = (a·a)·$b^2$ = $a^2$·$b^2$
+						\newline
+						\newline
+						suponemos que se cumple para n = i
+						(a·b)$^i$ = $a^i$·$b^i$
+						\newline
+						\newline
+						n = i+1
+						\newline
+						Sean a,b $\in$ $G$ 
+					\end{proof}
+				\end{enumerate}
 
 
 \end{document} % Fin del documento.
 
-a·a¹=e
-a¹·a²=e
-(a·a¹)·a²=a²
-a²·(a¹·a²)=a²
+44 - 102 páginas
+20 de enero - 21 de abril
+81 días
