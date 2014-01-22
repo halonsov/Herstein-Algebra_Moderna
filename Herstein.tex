@@ -963,18 +963,52 @@
 						\newline
 						\newline
 						suponemos que se cumple para n = i
+						\newline
 						(a·b)$^i$ = $a^i$·$b^i$
 						\newline
 						\newline
 						n = i+1
 						\newline
-						Sean a,b $\in$ $G$ 
+						Sean a,b $\in$ $G$ (a·b)$^{i+1}$ = (a·b)$^{i}$·(a·b) = ((a·b)$^{i}$·a)·b = (a·(a·b)$^{i}$)·b $\Rightarrow$ aplicando la hipotesis de inducción (a·(a·b)$^{i}$)·b = (a·($a^i$·$b^i$))·b = ((a·$a^i$)·$b^i$)·b = ($a^{i+1}$·$b^i$)·b = $a^{i+1}$·($b^i$·b) = $a^{i+1}$·$b^{i+1}$ $\therefore$ (a·b)$^{i+1}$ = $a^{i+1}$·$b^{i+1}$
+					\end{proof}.
+					\item Si $G$ es un grupo tal que (a·b)$^2$ = $a^2$·$b^2$ $\forall$ a,b $\in$ $G$ demuéstrese que $G$ ha de ser abeliano
+					\begin{proof}
+						Sea $G$ un grupo, a,b $\in$ $G$, (a·b)$^2$ = $a^2$·$b^2$ $\Rightarrow$ (a·b)·(a·b) = ($a^2$·b)·b $\Rightarrow$ ((a·b)·a)·b = ($a^2$·b)·b $\Rightarrow$ por Lema 2.2 (a·b)·a = $a^2$·b $\Rightarrow$ a·(b·a) = a·(a·b) $\Rightarrow$ por Lema 2.2 b·a = a·b $\forall$ a,b $\in$ $G$ $\therefore$ $G$ es abeliano
+					\end{proof}
+					\item Si $G$ es un gupo en el cual (a·b)$^i$ = $a^i$·$b^i$ para 3 enteros consecutivos i y para todos los a,b $\in$ $G$ demuestre que $G$ es abeliano
+					\begin{proof}
+						Sea $G$ un grupo, a,b $\in$ $G$ : (a·b)$^{i}$ = $a^i$·$b^i$, (a·b)$^{i+1}$ = $a^{i+1}$·$b^{i+1}$, (a·b)$^{i+2}$ = $a^{i+2}$·$b^{i+2}$ 
+						\newline
+						Para i+2
+						\newline
+						(a·b)$^{i+2}$ = $a^{i+2}$·$b^{i+2}$ $\Rightarrow$ (a·b)$^{i+1}$·(a·b) = $a^{i+2}$·($b^{i+1}$·b) $\Rightarrow$ ((a·b)$^{i+1}$·a)·b = ($a^{i+2}$·$b^{i+1}$)·b $\Rightarrow$ por Lema 2.2 (a·b)$^{i+1}$·a = $a^{i+2}$·$b^{i+1}$ $\Rightarrow$ $a^{i+1}$·$b^{i+1}$·a = (a·b)$^{i+1}$·a = $a^{i+2}$·$b^{i+1}$ $\Rightarrow$ $a^{i+1}$·$b^{i+1}$·a = $a^{i+2}$·$b^{i+1}$ $\therefore$ $b^{i+1}$·a = a·$b^{i+1}$ ····· (1)
+						\newline
+						Para i+1
+						\newline(a·b)$^{i+1}$ = $a^{i+1}$·$b^{i+1}$ $\Rightarrow$ (a·b)$^{i}$·(a·b) = $a^{i+1}$·($b^{i}$·b) $\Rightarrow$ ((a·b)$^{i}$·a)·b = ($a^{i+1}$·$b^{i}$)·b $\Rightarrow$ por Lema 2.2 (a·b)$^{i}$·a = $a^{i+1}$·$b^{i}$ $\Rightarrow$ $a^{i}$·$b^{i}$·a = (a·b)$^{i}$·a = $a^{i+1}$·$b^{i}$ $\Rightarrow$ $a^{i}$·$b^{i}$·a = $a^{i+1}$·$b^{i}$ $\therefore$ $b^{i}$·a = a·$b^{i}$ ····· (2)
+						\newline
+						De (1) y (2)
+						a·$b^{i+1}$ = (a·$b^i$)·b = ($b^{i}$·a)·b $\Rightarrow$ $b^{i}$·a  = ($b^{i}$·a)·b $\Rightarrow$ $b^i$·(b·a) = $b^i$·(a·b) $\Rightarrow$ por Lema 2.2 a·b = b·a $\forall$ a,b $\in$ $G$
 					\end{proof}
 				\end{enumerate}
-
-
 \end{document} % Fin del documento.
 
 44 - 102 páginas
 20 de enero - 21 de abril
 81 días
+
+(ab)³ = a³b³
+(ab)⁴ = a⁴b⁴
+(ab)⁵ = a⁵b⁵
+
+(ab)⁴(ab) = a⁵b⁵
+(ab)⁴a = a⁵b⁴
+a⁴b⁴a = (a⁴b⁴)a = a⁵b⁴ 
+ab⁴ = b⁴a
+
+(ab)³(ab) = a⁴b⁴
+(ab)³a = a⁴b³
+a³b³a = (ab)³a = a⁴b³
+b³a = ab³
+
+
+ab⁴ = b³ab
